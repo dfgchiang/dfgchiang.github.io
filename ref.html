@@ -3,13 +3,13 @@
 Copyright © 2018, State of Grace, Department of Fun and Games
 [MIT License](https://mit-license.org/)
 [GNU GPL v3](https://www.gnu.org/licenses/)
-[OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 [open-license](https://project-open-data.cio.gov/open-licenses/)
+[OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 [FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
 -->
 <html>
     <head>
-        <title>dfgchiang.github.io</title>
+        <title>references</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="dean.chiang@wildlife.ca.gov">
@@ -21,7 +21,7 @@ Copyright © 2018, State of Grace, Department of Fun and Games
         <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
         <script src="https://js.arcgis.com/4.8/"></script>
         <link rel="stylesheet" href="https://biosgis.github.io/css/dotty.css">
-        <script src="https://biosgis.github.io/js/dotty.js"></script>
+        <script src="js/dotty.js"></script>
         <style>
             html, body {
                 font-family: Consolas, Monaco, monospace;
@@ -34,8 +34,8 @@ Copyright © 2018, State of Grace, Department of Fun and Games
             }
         </style>
         <script>
-            DEFAULT_PAGE = 'index.html';
-            avn = 20180820;
+            DEFAULT_PAGE = 'ref.html';
+            avn = 20180821;
             window.addEventListener('load', function () {
                 console.log('Window loaded');
                 //addscript('js/amd.js?v=' + rv);
@@ -45,7 +45,7 @@ Copyright © 2018, State of Grace, Department of Fun and Games
     </head>
     <body>
         <header>
-            <h1>GIS Developer Reference</h1>
+            <h1>Web GIS Developer Reference</h1>
         </header>
         <nav>
             <a class="navlink" href="https://www.arcgis.com">AGOL</a>
@@ -75,8 +75,28 @@ Copyright © 2018, State of Grace, Department of Fun and Games
                 </a>
             </h2>
             <details>
+                <summary>WIP</summary>
+                <ol>
+                    <li>
+                        <a href="https://developers.arcgis.com/javascript/latest/sample-code/ge-geodesicbuffer/index.html">
+                            GeometryEngine - geodesic buffers
+                        </a>//20180821-buffer map click to identify query point 
+                        or line features.
+                    </li>
+                    <li>
+                        Clone JS object or DOM node:
+                        <a href="https://www.w3schools.com/jsref/met_node_clonenode.asp"></a>
+                    </li>
+                </ol>
+            </details>
+            <details>
                 <summary>NEXT</summary>
                 <ol>
+                    <li>
+                        <a href="https://developers.arcgis.com/javascript/latest/sample-code/sketch-geometries/index.html">
+                            Sketch temporary geometries
+                        </a>
+                    </li>
                 </ol>
             </details>
             <details>
