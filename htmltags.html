@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HTML Tags</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /*In the style*/
+            body {
+                font-size: 123%;
+                padding: 5px;
+            }
+            * {
+                border: 1px solid silver;
+                /*display: block; --this line will show the head content*/
+                margin: 2px; margin-bottom: 5px;
+                padding: 2px;
+            }
+            footer {
+                font-family: Consolas, Monaco, monospace;
+            }
+            table {
+                border: 1px solid teal;
+                border-width: 2px 4px 5px 1px;
+                border-collapse: collapse;
+            }
+            th {
+                border: 1px solid silver;
+                border-width: 1px 1px 2px 1px;
+                cursor: default;
+                padding: 2px;
+            }
+            th:hover {
+                background-color: aliceblue;
+                border-bottom: 2px solid steelblue;
+            }
+            td {
+                border: 1px solid gainsboro;
+                padding: 2px;
+                vertical-align: top;
+            }
+            .tcol {
+                white-space: nowrap;
+                width: 0%;
+            }
+            .tcell {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                max-width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        HTML tags or elements sample code in the document.body
+        <a href="https://www.w3schools.com/tags/ref_byfunc.asp" target="_blank">a = Anchor or hot link (to HTML reference page)</a>
+        <aside>aside = Aside block</aside>
+        <b>b = Bold text</b>
+        <blockquote>blockquote = Block quote</blockquote>
+        <cite>cite = Citation, like a book or painting title</cite>
+        <code>code = Computer code block</code>
+        <del>del = Deleted text</del>
+        <details>
+            <summary>summary = Click this Summary text to see details</summary>
+            <p>details tag wraps around summary</p>
+            <p>Displays details text by toggling triangle automatically added to summary</p>
+        </details>
+        <div>div = Division block</div>
+        <em>em = Emphasis</em>
+        <h1>h1 = Header 1</h1>
+        <h2>h2 = Header 2</h2>
+        <h3>h3 = Header 3</h3>
+        <h4>h4 = Header 4</h4>
+        <h5>h5 = Header 5</h5>
+        <i>i = Italics</i>
+        <p>p = Paragraph</p>
+        <pre>
+            pre
+= Pre-formatted text
+        </pre>
+        <q>q = Quick Quotes</q>
+        <s>s = Strike through text</s>
+        <samp>samp = Sample code snippet</samp>
+        <section>section = Section</section>
+        <span>span = Span of text</span>
+        <table title="table = Table">
+            <caption>caption = Table Caption, appears above table same width as rows.
+                Here: example of text-overflow contracted to ellipsis</caption>
+            <thead>
+                <tr>
+                    <th>
+                        th
+                    </th>
+                    <th class="tcol">
+                        Table Heading
+                    </th>
+                    <th class="tcol">
+                        Column_2
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td>
+                        Tfoot
+                    </td>
+                    <td class="tcell">
+                        Always at the bottom row no matter what the position
+                    </td>
+                    <td class="tcell">
+                        Sum
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>
+                        Row-1
+                    </td>
+                    <td class="tcell">
+                        Cell with long long long long long long long long long long long long long long long long long long long text
+                    </td>
+                    <td class="tcell">
+                        Table Data
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Row-2
+                    </td>
+                    <td class="tcell">
+                        text text text text text text text text text text text text text text text text text text text text text text
+                    </td>
+                    <td class="tcell">
+                        short strings
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <u>u = Underline, or specially formatted text</u>
+        <var>var = Variable</var>
+        <footer style="text-align: right;">
+            footer/script/document.lastModified&copy;
+            <script>
+                document.write(document.lastModified);
+            </script>
+        </footer>
+    </body>
+</html>

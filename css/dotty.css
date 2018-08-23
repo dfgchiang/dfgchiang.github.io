@@ -1,0 +1,316 @@
+/*
+Copyright © 2018, State of Grace, Department of Fun and Games
+[MIT License](https://mit-license.org/)
+[GNU GPL v3](https://www.gnu.org/licenses/)
+[open-license](https://project-open-data.cio.gov/open-licenses/)
+[OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+    Author     : dchiang 20180822
+*/
+body {
+    font-family:  Consolas, Monaco, Geneva, monospace, helvetica;
+    font-size: 123%;
+    margin-top: 0;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+aside {
+    background-color: azure;
+    border: 1px solid silver;
+    border-width: 1px 0 4px 2px;
+    max-width: 80%;
+    float: right;
+    padding-left: 5px;
+}
+code {
+    font-weight: bold;
+    margin: 1px 5px;
+}
+details {
+    margin-left: 5px;
+    overflow: auto;
+}
+footer {
+    background-color: ghostwhite;
+    border-top: 1px solid silver;
+    font-family: monospace;
+    margin-top: 10px;
+    padding: 5px;
+}
+h1 {
+    font-family: 'Arial Black', Tahoma, Impact, fantasy;
+    margin-top: 0;
+}
+h2 {
+    border-top: 1px solid snow;
+    font-family: Georgia, serif;
+}
+h3 {
+    border-bottom: 1px solid floralwhite;
+    color: steelblue;
+    font-family: Verdana, Tahoma, monospace;
+}
+h4 {
+    color: darkslategray;
+    font-family: Arial, sans-serif;
+}
+h5 {
+    font-family: 'Comic Sans MS', cursive;
+    font-variant: small-caps;
+}
+header {
+    background-color: whitesmoke;
+    border-bottom: 1px solid silver;
+    padding: 5px;
+}
+nav {
+    background-color: snow;
+    border-bottom: 1px solid silver;
+}
+pre {
+    background-color: aliceblue;
+    border-left: 5px solid gainsboro;
+    margin: 5px;
+    padding: 5px;
+}
+section {
+    border-bottom: 1px solid antiquewhite;
+}
+summary.big {
+    font-size: larger;
+    font-weight: bolder;
+}
+table {
+    background-color: white;
+    border-collapse: collapse;
+    border: 1px solid floralwhite;
+}
+td {
+    border: 1px solid floralwhite;
+    padding: 2px;
+    vertical-align: top;
+}
+th {
+    border: 1px solid floralwhite;
+    padding: 2px;
+    vertical-align: top;
+}
+table.flat {
+    background-color: white;
+    border: 1px solid dimgray;
+    border-collapse: collapse;
+    margin: 5px;
+}
+td.flat {
+    border: 1px solid gainsboro;
+    vertical-align: top;
+    padding: 2px;
+}
+th.flat {
+    border: 1px solid silver;
+    border-bottom: 2px solid gray;
+    font-size: small;
+    padding: 1px 5px;
+}
+tr.even {
+    background-color: white;
+}
+tr.even:hover {
+    background-color: lavender;
+}
+tr.odd {
+    background-color: aliceblue;
+}
+tr.odd:hover {
+    background-color: lavender;
+}
+
+#msgs {
+    min-height: 50px;
+    border-top: 1px solid lightslategray;
+    color: gray;
+    font-family: Consolas, 'Comic Sans MS';
+}
+
+.ali {
+    display: block;
+    margin: 2px;
+    padding: 2px;
+}
+.ab {
+    background-color: ivory;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+    line-height: 30px;
+    margin: 5px 1px;
+    padding: 1px 5px;
+}
+.big {
+    font-size: larger;
+    font-weight: bolder;
+}
+.klinks {
+    background-color: lavender;
+    border-bottom: 1px solid silver;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.clickme {
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: default;
+    padding: 1px 5px;
+}
+.clickme:hover {
+    background-color: lemonchiffon;
+    border: 1px solid lightcyan;
+    cursor: pointer;
+    font-style: italic;
+    text-decoration: none;
+}
+.comics {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    color: dimgray;
+    font-family: 'Comic Sans MS', system, monospace;
+    font-size: 100%;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+.go {
+    background-color: ghostwhite;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    margin: 0 2px;
+    padding: 1px 2px;
+    text-decoration: none;
+}
+.go:hover {
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    text-decoration: underline;
+}
+.hide { /*NO NEED - Use html hidden attribute instead -20171208*/
+    display: none;
+}
+.linkpool {
+    border: 2px solid khaki;
+    border-width: 2px 0;
+    padding: 1px;
+}
+.mono {
+    font-family: monospace;
+}
+.navlink {
+    border-right: 1px solid gainsboro;
+    font-family: sans-serif;
+    padding: 5px;
+    text-decoration: none;
+}
+.navlink:hover {
+    text-decoration: underline;
+}
+.red {
+    color: red;
+}
+.show {
+    display: '';
+}
+.right {
+    text-align: right;
+}
+.toggleme:hover {
+    background-color: lavender;
+    cursor: pointer;
+    font-style: italic;
+}
+.triright {
+    border: 15px solid white;
+    border-left-color: steelblue;
+    float: left;
+    height: 1px; width: 1px;
+    margin-right: 5px;
+}
+.smaller {
+    font-size: smaller;
+}
+.bug {
+    border: 1px solid crimson;
+    border-width: 1px 5px 1px 0px;
+    line-height: 123%;
+    margin: 2px;
+    padding: 2px;
+}
+.todo {
+    border-left: 5px solid khaki;
+    color: maroon;
+    line-height: 123%;
+    margin: 2px;
+    padding: 2px;
+}
+.doing {
+    border: 1px solid lightgreen;
+    border-width: 1px 5px 1px 0px;
+    line-height: 123%;
+    margin: 2px;
+    padding: 2px;
+}
+.done {
+    border-right: 5px solid lightsteelblue;
+    color: darkslateblue;
+    font-weight: bold;
+    line-height: 123%;
+    margin: 2px;
+    padding: 2px;
+}
+.INTERNAL {
+    color: dimgray;
+}
+.wish {
+    border-right: 5px solid azure;
+    color: magenta;
+    line-height: 123%;
+    margin: 2px;
+    padding: 2px;
+}
+.ref {
+    color: slategray;
+    font-style: italic;
+}
+.fxn {
+    color: firebrick;
+    font-weight: bold;
+}
+.var {
+    color: steelblue;
+    font-weight: bold;
+}
+.facebook {
+    background-color: royalblue;
+    color: white;
+    font-family: 'Arial Black', Impact, Tahoma, fantasy;
+    font-weight: bolder;
+    padding: 1px 5px;
+    margin: 0 5px;
+}
+.linkedin {
+    background-color: steelblue;
+    color: white;
+    font-family: 'Arial Black', Impact, Tahoma, fantasy;
+    font-weight: bolder;
+    padding: 1px 5px;
+    margin: 0 5px;
+}
+
+@media print {
+    nav {display: none;}
+    aside {display: none;}
+    pre {background-color: white;}
+}

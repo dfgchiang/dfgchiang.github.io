@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Font Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: cursive, fantasy, monospace, sans-serif, serif;
+                font-size: 14pt;
+            }
+            td {
+                background-color: white;
+                border: 1px solid silver;
+                float: left;
+                width: auto;
+                margin: 5px;
+                padding: 5px;
+            }
+            footer {
+                left: 0; bottom: 0; right: 0;
+                height: auto;
+                border-top: 1px solid silver;
+            }
+            .LargerBolder {
+                font-size: larger;
+                font-weight: bolder;
+            }
+            .Large {
+                font-size: large;
+            }
+            .Normal {
+                font-size: normal;
+            }
+            .Small {
+                font-size: small;
+                font-variant: small-caps;
+            }
+        </style>
+        <script>
+            function writeFonts() {
+                var fonts = [
+                    'Arial'
+                    , 'Arial Black'
+                    , 'Arial Narrow'
+                    , 'cursive'
+                    , 'Comic Sans MS'
+                    , 'fantasy'
+                    , 'Geneva'
+                    , 'Georgia'
+                    , 'Impact'
+                    , 'Consolas'
+                    , 'Courier'
+                    , 'Courier New'
+                    , 'helvetica'
+                    , 'Lucida Console'
+                    , 'Monaco'
+                    , 'monospace'
+                    , 'sans-serif'
+                    , 'serif'
+                    , 'Tahoma'
+                    , 'terminal'
+                    , 'Times'
+                    , 'system'
+                    , 'Verdana'
+                ];
+                var classes = ['LargerBolder', 'Large', 'Normal', 'Small'];
+                var content = document.getElementsByTagName('main')[0];
+                var tbl = document.createElement('table');
+                for (var i = 0; i < fonts.length; i++) {
+                    var row = tbl.insertRow(i);
+                    var family = fonts[i];
+                    for (var j = 0; j < classes.length; j++) {
+                        var size = classes[j];
+                        //var dv = document.createElement('div');
+                        //dv.className = size;
+                        //dv.innerHTML = family + ' ' + size;
+                        //dv.style.fontFamily = family;
+                        //content.appendChild(dv);
+                        var cell = row.insertCell(j);
+                        cell.className = size;
+                        cell.innerHTML = family + ' ' + size;
+                        cell.style.fontFamily = family;
+                    }
+                }
+                content.appendChild(tbl);
+                console.log('Written all fonts');
+            }
+            window.addEventListener('load', writeFonts);
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Fonts Test @14pt
+            </h1>
+        </header>
+        <main>
+        </main>
+        <footer>
+            <a href="mail:dean.chiang@wildlife.ca.gov">dean.chiang@wildlife.ca.gov</a>
+            &copy;
+            <script>
+                document.write(document.lastModified);
+            </script>
+        </footer>
+    </body>
+</html>
