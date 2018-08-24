@@ -30,7 +30,9 @@ code {
     margin: 1px 5px;
 }
 details {
-    margin-left: 5px;
+    border-bottom: 1px solid lavender;
+    margin-left: 10px;
+    padding: 5px;
     overflow: auto;
 }
 footer {
@@ -65,6 +67,9 @@ header {
     background-color: whitesmoke;
     border-bottom: 1px solid silver;
     padding: 5px;
+}
+main {
+    padding: 5px 10px;
 }
 nav {
     background-color: snow;
