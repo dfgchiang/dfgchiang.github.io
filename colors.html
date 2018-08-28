@@ -139,6 +139,9 @@ and open the template in the editor.
                     cell.style.color = colorname;
                     cell.style.fontWeight = 'bold';
                     cell.innerHTML = colortxt;
+                    cell.ondblclick = function () {
+                        window.open('https://www.w3schools.com/colors/color_tryit.asp?color=' + cell.innerHTML);
+                    }
                     j += 1;
                 }
             }

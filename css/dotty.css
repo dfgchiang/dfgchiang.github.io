@@ -103,18 +103,27 @@ th {
     padding: 2px;
     vertical-align: top;
 }
+table.dgrid tr:hover {
+    background-color: floralwhite;
+}
+table.dgrid tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+table.dgrid tr:nth-child(even):hover {
+    background-color: snow;
+}
 table.flat {
     background-color: white;
     border: 1px solid dimgray;
     border-collapse: collapse;
     margin: 5px;
 }
-td.flat {
+table.flat td {
     border: 1px solid gainsboro;
     vertical-align: top;
     padding: 2px;
 }
-th.flat {
+table.flat th {
     border: 1px solid silver;
     border-bottom: 2px solid gray;
     font-size: small;
