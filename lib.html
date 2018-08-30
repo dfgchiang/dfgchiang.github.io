@@ -33,8 +33,18 @@ Copyright © 2018, State of Grace, Department of Fun and Games
         <header>
             <h1>Lib Resources</h1>
         </header>
-        <nav></nav>
-        <aside>
+        <nav>
+            <a class="navlink" href="https://www.arcgis.com">AGOL</a>
+            <a class="navlink" href="https://developers.arcgis.com/dashboard" title="ArcGIS Developers Dashboard">ArcDev</a>
+            <a class="navlink" href="https://portal.azure.com/" title="Azure Portal Dashboard">Azure</a>
+            <a class="navlink" href="https://github.com/cdfw">GitHub</a>
+            <a class="navlink" href="https://outlook.office365.com/owa/">OWA</a>
+            <a class="navlink" href="https://cdfw.sharepoint.com/SitePages/Home.aspx">SharePoint</a>
+            <a class="navlink" href="https://dfgchiang.visualstudio.com/_projects" title="Visual Studio">VSTS</a>
+            <a class="navlink" onclick="togglex(document.getElementsByTagName('aside')[0])" style="cursor: default;">&equiv;</a>
+        </nav>
+        <aside style="display: none;">
+            <a href="https://project-open-data.cio.gov/open-licenses/" title="Open Licenses"></a>
             <a href="https://aiosgit.github.io"></a>
             <a href="https://biosgis.azurewebsites.net"></a>
             <a href="https://biosgis.github.io"></a>
@@ -56,15 +66,64 @@ Copyright © 2018, State of Grace, Department of Fun and Games
                 <ol>
                     <li>
                         <a href="http://www.losrios.edu/arc/fall/Geography-GEOG.htm">
-                            GEOG 344    Spatial Analysis and Modeling in GIS    3 Units
+                            GEOG
                         </a>
+                        <a href="http://dcs.losrios.edu/dcs_coursedetails.aspx?strm=1189&cn=12381&s=GEOG">
+                            344    Spatial Analysis and Modeling in GIS
+                        </a> 3 Units (
+                        Prerequisite: GEOG 330 with a grade of "C" or better)
+                        <p>
+                            This course provides a survey of the various concepts, approaches, and tools 
+                            involved in the analysis and modeling of spatial data 
+                            using Geographic Information Systems (GIS). 
+                            It emphasizes the use of spatial and statistical analysis, 
+                            geoprocessing, and spatial modeling in order to investigate 
+                            spatial distributions and relationships, answer spatial questions, and solve spatial problems. 
+                            Specific topics include distance and density surfaces, 
+                            cluster analysis, network analysis, map algebra, 
+                            surface interpolation and resampling, hydrologic analysis, 
+                            3D display/animation, and regression analysis.
+                        </p>
                     </li>
                 </ol>
             </details>
             <details>
                 <summary>Tutorials</summary>
+                Samples and tutorial materials downloaded to <a href="/apps/clones"></a>
                 <ol>
-                    <li><a href="/apps/clones"></a></li>
+                    <li>
+                        <a href="https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-get-started-nodejs">
+                            Create a Node.js web app in Azure
+                        </a>//20180829
+                        <ol>
+                            <li>Copied tutorial zip to /apps/clones</li>
+                            <li></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="https://developers.arcgis.com/labs/rest/get-an-access-token/"></a>
+                        <details>
+                            <summary>Node.js</summary>
+                            <pre>
+var request = require("request");
+
+var options = { method: 'POST',
+  url: 'https://www.arcgis.com/sharing/rest/oauth2/token',
+  headers:
+  { 'content-type': 'application/x-www-form-urlencoded' },
+  form:
+  { client_id: 'CLIENT_ID_FROM_YOUR_APPLICATION',
+    client_secret: 'CLIENT_SECRET_FROM_YOUR_APPLICATION',
+    grant_type: 'client_credentials' } 
+};
+
+request(options, function (error, response, body) {
+  if (error) throw new Error(error);
+  console.log(body);
+});
+                            </pre>
+                        </details>
+                    </li>
                     <li>
                         <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v1-openid-connect-code">
                             Azure AD Node.js web app getting started
@@ -110,11 +169,6 @@ Copyright © 2018, State of Grace, Department of Fun and Games
                     <li>
                         <a href="http://leafletjs.com/reference-1.1.0.html#map-zoomcontrol">
                             npm package.json doc
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://docs.microsoft.com/en-us/azure/app-service-web/app-service-web-get-started-nodejs">
-                            Create a Node.js web app in Azure
                         </a>
                     </li>
                     <li>
