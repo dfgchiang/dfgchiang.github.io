@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--
+Copyright © 2018, State of Grace, Department of Fun and Games
+[MIT License](https://mit-license.org/)
+[GNU GPL v3](https://www.gnu.org/licenses/)
+[open-license](https://project-open-data.cio.gov/open-licenses/)
+[OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+[FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
+-->
+<html>
+    <head>
+        <title>dfgchiang dir</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="dean.chiang@wildlife.ca.gov">
+        <meta name="description" content="Bios 6 Developer Documentation">
+        <meta name="generator" content="bios-20180727">
+        <meta name="robots" content="noindex, nofollow, noarchive">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+        <script src="https://js.arcgis.com/4.8/"></script>
+        <link rel="stylesheet" href="css/dotty.css">
+        <script src="js/abc.js"></script>
+        <style>
+        </style>
+        <script>
+            window.addEventListener('load', function () {
+                console.log('Window loaded');
+                //addscript('js/amd.js?v=' + rv);
+                om = poplinks();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>DFGIS Development</h1>
+        </header>
+        <nav>
+            <a class="navlink" href="https://www.arcgis.com">AGOL</a>
+            <a class="navlink" href="https://map.dfg.ca.gov/arcgis/">AGS</a>
+            <a class="navlink" href="https://developers.arcgis.com/dashboard" title="ArcGIS Developers Dashboard">ArcDev</a>
+            <a class="navlink" href="https://portal.azure.com/" title="Azure Portal Dashboard">Azure</a>
+            <a class="navlink" href="https://portal.azure.us/" title="Azure Government Dashboard">AzureGov</a>
+            <a class="navlink" href="https://map.dfg.ca.gov/bios?log=off&msg=on">BIOS</a>
+            <a class="navlink" href="https://github.com/cdfw">GitHub</a>
+            <a class="navlink" href="https://cdfw-my.sharepoint.com/personal/dean_chiang_wildlife_ca_gov/" title="OneNote">OneDrive</a>
+            <a class="navlink" href="https://outlook.office365.com/owa/">OWA</a>
+            <a class="navlink" href="https://cdfw.sharepoint.com/SitePages/Home.aspx">SharePoint</a>
+            <a class="navlink" href="https://dfgchiang.visualstudio.com/_projects" title="Visual Studio">VSTS</a>
+            <a class="navlink" onclick="togglex(document.getElementsByTagName('aside')[0])" style="cursor: default;">&equiv;</a>
+        </nav>
+        <aside style="display: none;">
+            <a href="https://blogs.esri.com/esri/arcgis/" title="ArcGIS Blog"></a>
+            <a href="https://developers.arcgis.com" title="ArcGIS Developers"></a>
+            <a href="http://www.arcgis.com/" title="ArcGIS Online"></a>
+            <a href="http://opendata.arcgis.com/" title="ArcGIS OpenData"></a>
+            <a href="http://resources.arcgis.com/en/home/" title="ArcGIS Resources"></a>
+            <a href="http://solutions.arcgis.com/" title="ArcGIS Solutions"></a>
+            <a href="https://blogs.msdn.microsoft.com/azuregov/" title="AzureGov blog"></a>
+            <a href="https://console.bluemix.net/dashboard/apps/" title="IBM Cloud"></a>
+            <a href="http://www.esri.com/videos/" title="Esri Videos"></a>
+            <a href="https://community.esri.com/" title="GeoNyet"></a>
+            <a href="http://www.sco.ca.gov/calaters.html" title="CalATERS"></a>
+            <a href="http://www.caltravelstore.com/" title="CalTravelStore"></a>
+            <a href="https://cdfwsp.wildlife.ca.gov/" title="CDFW SharePoint"></a>
+            <a href="https://ftp.wildlife.ca.gov/" title="FTP"></a>
+            <a href="https://anaconda.org/" title="Anaconda"></a>
+            <a href="https://bitbucket.org" title="BitBucket"></a>
+            <a href="https://github.com" title="GitHub"></a>
+            <a href="https://gitlab.com" title="GitLab"></a>
+            <a href="https://dashboard.heroku.com/" title="Heroku"></a>
+            <a href="https://developer.microsoft.com/en-us/" title="MS Developer"></a>
+            <a href="https://msdn.microsoft.com/en-us/default.aspx" title="MSDN"></a>
+            <a href="https://my.visualstudio.com/getstarted" title="My Visual Studio"></a>
+            <a href="https://trello.com/home" title="Trello"></a>
+            <a href="https://developers.arcgis.com/python/" title="Python"></a>
+            <a href="https://www.test-cors.org/"></a>
+            <a href="https://jsonlint.com/"></a>
+            <a href="https://esri.github.io"></a>
+            <a href="https://biosgis.github.io" style="display: none;"></a>
+            <a class="esri-icon-close" onclick="hidex(this.parentNode)"></a>
+        </aside>
+        <main>
+            <h2>
+                Map
+                <a href="http://www.arcgis.com/">AGOL</a>
+                <a href="https://map.dfg.ca.gov/arcgis/">AGS</a>
+                <a href="https://map.dfg.ca.gov/ace/?log=off&msg=on">ACE</a>
+                <a href="https://map.dfg.ca.gov/bios/?bl=Streets&zl=8&log=off&msg=on">BIOS</a>
+                <a href="https://map.dfg.ca.gov/bios/?al=ds45&dslist=8,85,704,705,1002,1354,583,2652&log=off&msg=on">CNDDB</a>
+                <a href="https://map.dfg.ca.gov/bios/?bookmark=326&log=off&msg=on">NSO</a>
+                <a href="https://map.dfg.ca.gov/bios/?tool=cnddbQuick&log=off&msg=on">QuickViewer</a>
+                <a href="https://map.dfg.ca.gov/imaps/cwhr/cwhrlife.html">CWHR</a>
+                <a href="https://map.dfg.ca.gov/imaps/delta">Delta</a>
+                <a href="https://www.wildlife.ca.gov/Data/CNDDB/Submitting-Data">Field Survey</a>
+                <a href="https://map.dfg.ca.gov/fishing/?log=off&msg=on">FishingGuide</a>
+                <a href="https://map.dfg.ca.gov/sportfishingregs/">FishingRegs</a>
+                <a href="https://map.dfg.ca.gov/lands/?log=off&msg=on">Lands</a>
+                <a href="https://map.dfg.ca.gov/marine/?log=off&msg=on">Marine</a>
+                <a href="https://map.dfg.ca.gov/rarefind/view/rarefind.aspx">RareFind5</a>
+                <a href="https://apps.wildlife.ca.gov/wir" title="Wildlife Incident Reporting">WIR</a>
+            </h2>
+            <h2>
+                <a href="https://www.wildlife.ca.gov">CDFW</a>
+                <a href="https://cdfw.maps.arcgis.com/home/">AGOL</a>
+                <a href="https://www.wildlife.ca.gov/Data/Analysis/Ace">Home</a>
+                <a href="https://www.wildlife.ca.gov/Data/BIOS">Home</a>
+                <a href="https://www.wildlife.ca.gov/Data/BIOS/Dataset-Index">Metadata&amp;Download</a>
+                <a href="ftp://ftp.dfg.ca.gov/BDB/GIS/BIOS/Public_Datasets/">FTP</a>
+                <a href="https://www.wildlife.ca.gov/Data/CNDDB">CNDDB</a>
+                <a href="https://www.wildlife.ca.gov/Fishing">Fishing</a>
+                <a href="https://nrm.dfg.ca.gov/habitrak/Default.aspx">HabiTrak</a>
+                <a href="https://www.wildlife.ca.gov/Conservation/Planning/Banking" class="small">CMB</a>
+                <a href="http://nrm.dfg.ca.gov/FishPlants/">Planting Schedule</a>
+                <a href="https://www.wildlife.ca.gov/Lands">Lands</a>
+                <a href="https://www.wildlife.ca.gov/Regions/Marine">Marine</a>
+            </h2>
+            <h2>
+                Clouds
+                <a href="https://anaconda.org/dfgchiang/dashboard">Anaconda</a>
+                <a href="https://www.arcgis.com">ArcGIS</a>
+                <a href="https://portal.azure.com/#dashboard">Azure</a>
+                <a href="https://portal.azure.us/#dashboard" style="color: gray;">AzureGov</a>
+                <a href="https://bitbucket.org">BitBucket</a>
+                <a href="https://bitbucket.org" title="IBM Cloud">Bluemix</a>
+                <a href="https://github.com">GitHub</a>
+                <a href="https://gitlab.com">GitLab</a>
+                <a href="https://console.cloud.google.com" title="Google cloud console">Google</a>
+                <a href="https://dashboard.heroku.com/">Heroku</a>
+                <a href="https://qgiscloud.com/" title="QGIS Cloud">QGIS</a>
+            </h2>
+            <h2 id="BIOS">
+                <a href="https://www.wildlife.ca.gov/Data/BIOS" title="Biogeographic Information Observation System">BIOS</a>
+                <a href="https://map.dfg.ca.gov/bios">Viewer</a>
+                <a href="https://map.dfg.ca.gov/arcgis" title="ArcGIS Server REST services">AGS</a>
+                <a href="https://www.arcgis.com/home/search.html?q=biosds&start=1&sortOrder=desc&sortField=relevance" title="ArcGIS Online">AGOL</a>
+            </h2>
+            <details>
+                <summary>BIOS Links</summary>
+                <h3>ArcGIS Online Data</h3>
+                <ol>
+                    <li><a href="https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/BIOS_ManifestPro/FeatureServer"></a></li>
+                </ol>
+            </details>
+            <h2 id="GIS">
+                GIS
+            </h2>
+            <details>
+                <summary>GIS Links</summary>
+                <h3>Web GIS</h3>
+                <ol>
+                </ol>
+            </details>
+            <section>
+                <h2 id="LAB">
+                    Lab
+                </h2>
+                <details>
+                    <summary>Lessons</summary>
+                    <ol>
+                        <li>
+                            <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-nodejs-application">
+                                Build a Node.js web application using Azure Cosmos DB
+                            </a> [20180322]
+                        </li>
+                        <li>
+                            <a href="https://anitagraser.com/2018/09/11/geocoding-with-geopy/">
+                                Geocoding with Geopy</a> 20180911
+                        </li>
+                    </ol>
+                </details>
+            </section>
+            <section>
+                <h2 id="LIB">
+                    Library
+                </h2>
+                <details>
+                    <summary>References</summary>
+                    <ol>
+                        <li>
+                            <a href="https://developers.arcgis.com/javascript/latest/guide/esri-icon-font/index.html">
+                                Esri Icon Font (Calcite theme)
+                            </a>//20180430
+                        </li>
+                        <li>
+                            <a href="https://developers.arcgis.com/javascript/latest/guide/cors/index.html">
+                                CORS (Cross Origin Resource Sharing)
+                            </a>//20180726
+                        </li>
+                        <li>
+                            <a href="https://requirejs.org/">RequireJS</a>|
+                            <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMDJS API</a>|
+                            <a href="https://requirejs.org/docs/commonjs.html">CommonJS</a>|
+                            <a href="https://nodejs.org/docs/latest/api/modules.html">Node.js CommonJS</a>
+                        </li>
+                    </ol>
+                </details>
+            </section>
+            <section style="color: dimgray;">
+                <h2 id="LOCAL">
+                    Local Listing
+                </h2>
+                <details>
+                    <summary>ls</summary>
+                    <ul>
+                        <li><a href="apps.html"></a></li>
+                        <li><a href="chars.html"></a></li>
+                        <li><a href="colors.html"></a></li>
+                        <li><a href="dash.html"></a></li>
+                        <li><a href="fonttest.html"></a></li>
+                        <li><a href="htmltags.html"></a></li>
+                        <li><a href="lib.html"></a></li>
+                        <li><a href="pub.html"></a></li>
+                        <li><a href="ref.html"></a></li>
+                    </ul>
+                </details>
+            </section>
+        </main>
+        <footer>
+            @<a href="mailto:dean.chiang@wildlife.ca.gov">dchiang</a>
+            <script>
+                var brk = '<br>';
+                document.write('&copy;' + document.lastModified + brk);
+                document.write('&bull; URL Referer: ' + document.referrer + brk);
+                document.write('&diams; Browser Client: ' + navigator.userAgent + ' on ' + navigator.platform + brk);
+                document.write('&rect; Window Size: ' + window.innerWidth + 'x' + window.innerHeight + brk);
+            </script>
+        </footer>
+    </body>
+</html>
