@@ -6,6 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <title>HTML Entities Characters</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9,IE=edge" />
@@ -15,7 +16,8 @@ and open the template in the editor.
         <meta name="description" content="character entities and unicode symbols reference" />
         <meta name="keywords" content="character entities and unicode symbols reference" />
         <meta name="ed" content="20150317" />
-        <title>HTML Entities Characters</title>
+        <link rel="stylesheet" href="css/dotty.css">
+        <script src="js/dotty.js"></script>
         <style type="text/css">
             body {
                 font-size: 100%;
@@ -23,142 +25,12 @@ and open the template in the editor.
                 /*background-color: whitesmoke;*/
                 overflow-x: hidden;
             }
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            a.bee {
-                background-color: white;
-                border: 1px solid gray;
-                color: dimgray;
-                border-radius: 5px;
-                font: normal normal bold small Arial;
-                margin: 5px;
-                padding: 2px;
-                text-decoration: none;
-            }
-            a.bee:hover {
-                background-color: steelblue;
-                border: 1px solid transparent;
-                color: white;
-            }
-            a.qb {
-                border: 1px solid gray;
-                border-width: 0px 1px 0px 1px;
-                font: normal normal normal small Arial, Helvetica, sans-serif;
-                margin: 0px 1px 0px 1px;
-                padding: 0px 5px 0px 5px;
-                text-decoration: none;
-            }
-            a.qb:hover {
-                text-decoration: underline;
-            }
-            a.btn {
-                border: 1px solid silver;
-                font: normal normal normal 200% Arial, Helvetica, sans-serif;
-                text-decoration: none;
-            }
-            input.btn {
-                font: normal normal bold 200% Arial, Helvetica, sans-serif;
-            }
-            em {
-                font: normal normal normal small Courier, monospace;
-            }
-            h1 {
-                border-bottom: 2px solid silver;
-            }
-            li {
-                margin-bottom: 8px;
-            }
-            p {
-                font: normal normal normal small Courier, System, Terminal;
-            }
-            pre {
-                font: normal normal normal small Courier, System, Terminal;
-            }
-            td {
-                border-color: silver;
-            }
-            tr {
-                border-color: silver;
-            }
-            #ta {
-                /*position: absolute;*/
-                top: 10%; right: 2%; bottom: auto; left: 2%;
-                height: 30%; width: 95%;/*auto defaults to html cols size*/
-            }
-            #note {
-                /*position: absolute;*/
-                top: 45%; right: 2%; bottom: 40px; left: 2%;
-                height: auto; width: auto;
-                background-color: white;
-                border: 1px solid gray;
-                font: normal normal normal 100% "Comic Sans MS", Georgia, Courier;
-                overflow: auto;
-                padding: 5px;
-            }
-            #statusbar {
-                position: absolute;
-                top: auto; right: 0px; bottom: 0px; left: 0px;
-                height: 30px; width: 100%;
-                background-color: lightgray;
-                border-top: 1px solid dimgray;
-                padding: 2px 5px 2px 5px;
-            }
-            .new 
-            {
-                background-color: Yellow;
-                font-weight: bold;
-                padding: 5px;
-            }
-            .depre {
-                background-color: silver;
-                color: dimgray;
-                font: italic small-caps normal 90% "Comic Sans MS", Verdana, Geneva, Georgia, Arial, Helvetica, sans-serif;
-                margin-top: 5px; margin-right: 5px;
-            }
-            .hide {
-                display: none;
-            }
         </style>
         <script type="text/javascript">
-            function poplinks() {
-                var links = document.getElementsByTagName('a');
-                var atotal = 0;
-                for (var i = 0; i < links.length; i++) {
-                    var a = links[i];
-                    if (a.href !== undefined && a.href !== '') {
-                        if (a.href.indexOf('#') < 0 && a.href.indexOf("javascript:void") < 0
-                            && a.href.indexOf("mailto:") < 0 && a.target !== '_self') {
-                            a.target = "_blank";
-                        }
-                        if (a.innerHTML === '' && a.className === '') {
-                            a.style.lineHeight = '150%';
-                            if (a.title !== '') {
-                                a.innerHTML = a.title + ' <br/>';
-                            } else {
-                                a.innerHTML = a.href.replace('https://', '').replace('http://', '').replace(/\/$/, '').replace('www.', '').replace(/\.(com|gov|net|org|io)/, '') + ' <br/>';
-                            }
-                        }
-                    }
-                    atotal = i + 1;
-                }
-                console.log(atotal + ' Links')
-                return atotal;
-            }
-            function init() {
+            window.addEventListener('load', function () {
                 var atotal = poplinks();
                 document.getElementsByTagName("h1")[0].title = atotal + " LInks";
-            }
-            window.onload = init;
-        </script>
-        <script type="text/javascript">
-            function pageLoaded() {
-                //document.getElementById('ta').focus();
-            }
-            window.onload = pageLoaded;
+            });
         </script>
     </head>
     <body>
