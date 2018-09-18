@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tips</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="dchiang">
+        <meta name="description" content="">
+        <meta name="generator" content="aios-20180812">
+        <meta name="robots" content="noindex, nofollow, noarchive">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+        <script src="https://js.arcgis.com/4.8/"></script>
+        <link rel="stylesheet" href="https://biosgis.github.io/css/dotty.css">
+        <script src="https://biosgis.github.io/js/dotty.js"></script>
+        <style>
+            body {
+                font-family: Consolas, Monaco, monospace;
+                font-size: 123%;
+            }
+            details {
+                border-bottom: 1px solid cadetblue;
+                margin: 5px 5px 10px 10px;
+                padding: 5px;
+            }
+        </style>
+        <script>
+            window.addEventListener("load", function () {
+                om = poplinks();
+            });
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Tips and Tricks</h1>
+        </header>
+        <main>
+            <section>
+                <h2>ASP.NET</h2>
+                <details>
+                    <summary>dudNET bore</summary>
+                    <ol>
+                        <li>
+                            Build solution/project required before running it as local web app.//20180918
+                        </li>
+                    </ol>
+                </details>
+            </section>
+            <section>
+                <h2>Common Commands</h2>
+                <details>
+                    <summary>Git Commands</summary>
+                    <pre>
+                    //20180918
+git --version
+git update-git-for-windows
+git remote add origin git@github.com:biosgis/biosgis.github.io.git #ssl key-required
+git remote add origin https://github.com/dfgchiang/dfgchiang.github.io.git #interactive-login
+or
+git clone https://github.com/biosgis/biosgis.github.io.git biosgis.github.io
+git push -u origin master
+                    </pre>
+                </details>
+                <details>
+                    <summary>Node.js and npm Commands</summary>
+                    <pre>
+                    //20180918
+node --version
+npm --version
+                    </pre>
+                </details>
+            </section>
+            <section>
+                <h2>
+                    Fails
+                </h2>
+                <details>
+                    <summary>Does Not Work</summary>
+                    <ol>
+                        <li>
+                            Using esri-icon-class in html input element like
+                            [input type=button class=esri-icon-search] shows blank
+                            //20180914
+                        </li>
+                    </ol>
+                </details>
+            </section>
+        </main>
+        <footer>
+            @<a href="mailto:biosgis@gmail.com">biosgis</a>
+            <script>
+                var brk = '<br>';
+                document.write('&copy;' + document.lastModified + brk);
+                document.write('&bull; URL Referer: ' + document.referrer + brk);
+                document.write('&diams; Browser Client: ' + navigator.userAgent + ' on ' + navigator.platform + brk);
+                document.write('&rect; Window Size: ' + window.innerWidth + 'x' + window.innerHeight + brk);
+            </script>
+        </footer>
+    </body>
+</html>
