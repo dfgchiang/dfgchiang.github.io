@@ -9,7 +9,7 @@ Copyright © 2018, State of Grace, Department of Fun and Games
 -->
 <html>
     <head>
-        <title>dfgchiang dir</title>
+        <title>dfgis</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="dean.chiang@wildlife.ca.gov">
@@ -144,74 +144,107 @@ Copyright © 2018, State of Grace, Department of Fun and Games
                     <li><a href="https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/BIOS_ManifestPro/FeatureServer"></a></li>
                 </ol>
             </details>
-            <h2 id="GIS">
-                GIS
-            </h2>
-            <details>
-                <summary>GIS Links</summary>
-                <h3>Web GIS</h3>
-                <ol>
-                </ol>
-            </details>
             <section>
-                <h2 id="LAB">
-                    Lab
+                <h2 id="BAYDELTA">
+                    Bay Delta
                 </h2>
                 <details>
-                    <summary>Lessons</summary>
+                    <summary>Esri-Leaflet References</summary>
                     <ol>
                         <li>
-                            <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-nodejs-application">
-                                Build a Node.js web application using Azure Cosmos DB
-                            </a> [20180322]
+                            <a href="https://esri.github.io/esri-leaflet/examples/">
+                                Esri Leaflet Quickstart  
+                            </a>
                         </li>
                         <li>
-                            <a href="https://anitagraser.com/2018/09/11/geocoding-with-geopy/">
-                                Geocoding with Geopy</a> 20180911
+                            New Delta SKT maplet by 
+                            <a href="https://esri.github.io/esri-leaflet/">esri-leaflet</a>
+                            and 
+                            <a href="http://leafletjs.com/reference-1.1.0.html#map-zoomcontrol">Leaflet.js</a>:
+                            <a href="https://gisdev.ad.dfg.ca.gov/imaps/delta/sktmaplet.html">
+                                sktmaplet.html
+                            </a> //20170801
                         </li>
-                    </ol>
-                </details>
-            </section>
-            <section>
-                <h2 id="LIB">
-                    Library
-                </h2>
-                <details>
-                    <summary>References</summary>
-                    <ol>
-                        <li>
-                            <a href="https://developers.arcgis.com/javascript/latest/guide/esri-icon-font/index.html">
-                                Esri Icon Font (Calcite theme)
-                            </a>//20180430
-                        </li>
-                        <li>
-                            <a href="https://developers.arcgis.com/javascript/latest/guide/cors/index.html">
-                                CORS (Cross Origin Resource Sharing)
-                            </a>//20180726
-                        </li>
-                        <li>
-                            <a href="https://nodejs.org/"></a>
-                            <a href="https://requirejs.org/"></a>
-                            <a href="https://vuejs.org/"></a>
-                            <a href="http://jade-lang.com/"></a>
-                            <a href="http://turfjs.org/"></a>
+                        <li>20170808
+                            Change point feature symbol of stations from default marker 
+                            to customized red cross as no-catch sampling locations.
+                            <a href="https://esri.github.io/esri-leaflet/api-reference/layers/feature-layer.html">
+                                L.featureLayer
+                            </a> which feature 
+                            <a href="http://geojson.org/geojson-spec.html#feature-objects">
+                                GeoJson features
+                            </a> and options for style points to 
+                            <a href="http://leafletjs.com/reference-1.2.0.html#path-option">
+                                Leaflet path option
+                            </a> but don't know how the path is defined so look at 
+                            <a>
+                                Renderer
+                            </a>
                         </li>
                         <li>
-                            <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">AMDJS API</a>|
-                            <a href="https://requirejs.org/docs/commonjs.html">CommonJS</a>|
-                            <a href="https://nodejs.org/docs/latest/api/modules.html">Node.js CommonJS</a>|
+                            Disable mouse wheel zoom - SEE--
+                            <a href="https://gis.stackexchange.com/questions/214613/how-to-disable-mouse-wheel-zoom-using-arcgis-api-for-javascript-4-1">
+                                stackx
+                            </a>, 
+                            <a href="https://geonet.esri.com/thread/177970#comment-612463">
+                                geonyet
+                            </a> //20170629
                         </li>
                         <li>
-                            <a href="http://kdiff3.sourceforge.net/"></a>
+                            Freeze the map canvas by 
+                            <a href="https://gis.stackexchange.com/questions/54454/disable-leaflet-interaction-temporary">
+                                disabling Leaflet interaction
+                            </a> and hiding 
+                            <a href="http://leafletjs.com/reference-1.1.0.html#map-zoomcontrol">
+                                zoom control
+                            </a> //20170722
                         </li>
-                    </ol>
-                </details>
-                <details>
-                    <summary>Software</summary>
-                    <ol>
-                        <li><a href="https://gitforwindows.org/"></a></li>
-                        <li><a href="http://gitup.co"></a></li>
-                        <li><a href="https://desktop.github.com/"></a></li>
+                        <li>How to query the feature layer? 
+                            <a href="https://esri.github.io/esri-leaflet/api-reference/tasks/query.html">
+                                L.Query
+                            </a> //20170724
+                        </li>
+                        <li>How to create markers from query result and symbolize each marker? 
+                            <a href="http://leafletjs.com/reference-1.1.0.html#divicon">
+                                DivIcon
+                            </a> to change from default icon on marker //20170725-OK but 
+                            NEXT: How to remove each query result batch?
+                        </li>
+                        <li>How to group the markers together? 
+                            <a href="http://leafletjs.com/reference-1.1.0.html#layergroup">
+                                L.layerGroup
+                            </a> //20170725
+                        </li>
+                        <li>How to customize the DivIcon for different size and color and shape?
+                            <a>
+                                html string in DivIcon property when constructing the simple icon.
+                            </a> 
+                            GOOD--can embed SVG code inside div, 
+                            UGLY but svg coordinate space starts at 0,0 
+                            at the marker point location and expands to lower right quadrant, 
+                            FIX--however, I can shift the box with css class 
+                            on the parent div of the svg using relative position 
+                            starting at negative top and left to the station spot.
+                            //20170726
+                        </li>
+                        <li>
+                            <a href="https://www.w3schools.com/graphics/svg_intro.asp">
+                                SVG basic Tutorial
+                            </a>, 
+                            <a href="https://css-tricks.com/svg-path-syntax-illustrated-guide/">
+                                guide to A elliptical arc path sweep
+                            </a> whereas 
+                            <code>A width,height rotation, arc, sweep, eX,eY</code>
+                            //20170726
+                        </li>
+                        <li>
+                            <a href="https://esri.github.io/esri-leaflet/examples/querying-feature-layers-1.html">
+                                Querying features example 1
+                            </a> with just <code>featureLayer.setWhere(sql)</code>
+                        </li>
+                        <li>
+                            NEXT--CHANGE STATIONS MARKER SYMBOL AND LABEL, TURN LAYER ON-OFF
+                        </li>
                     </ol>
                 </details>
             </section>
