@@ -27,20 +27,94 @@ Copyright © 2018, State of Grace, Department of Fun and Games
         <script>
             window.addEventListener('load', function () {
                 console.log('Window loaded');
-                //addscript('js/amd.js?v=' + rv);
                 om = poplinks();
             });
         </script>
     </head>
     <body>
         <header>
-            <h1>
-                <a href=".">DFGIS</a>
-            </h1>
+            <h1>DFGIS Development</h1>
         </header>
+        <nav>
+            <a class="navlink" href="https://www.arcgis.com">AGOL</a>
+            <a class="navlink" href="https://map.dfg.ca.gov/arcgis/">AGS</a>
+            <a class="navlink" href="https://developers.arcgis.com/dashboard" title="ArcGIS Developers Dashboard">ArcDev</a>
+            <a class="navlink" href="https://portal.azure.com/" title="Azure Portal Dashboard">Azure</a>
+            <a class="navlink" href="https://dev.azure.com/dfgchiang/" title="Azure DevOps formerly Visual Studio Team Services">AzureDev</a>
+            <a class="navlink" href="https://portal.azure.us/" title="Azure Government Dashboard">AzureGov</a>
+            <a class="navlink" href="https://map.dfg.ca.gov/bios?log=off&msg=on">BIOS</a>
+            <a class="navlink" href="https://github.com/cdfw">GitHub</a>
+            <a class="navlink" href="https://cdfw-my.sharepoint.com/personal/dean_chiang_wildlife_ca_gov/" title="OneNote">OneDrive</a>
+            <a class="navlink" href="https://outlook.office365.com/owa/">OWA</a>
+            <a class="navlink" href="https://cdfw.sharepoint.com/SitePages/Home.aspx">SharePoint</a>
+            <a class="navlink" href="https://dfgchiang.visualstudio.com/" title="Azure DevOps formerly Visual Studio Team Services">VSTS</a>
+            <a class="navlink" onclick="togglex(document.getElementsByTagName('aside')[0])" style="cursor: default;">&equiv;</a>
+        </nav>
+        <aside style="display: none;">
+            <a href="https://blogs.esri.com/esri/arcgis/" title="ArcGIS Blog"></a>
+            <a href="https://developers.arcgis.com" title="ArcGIS Developers"></a>
+            <a href="http://www.arcgis.com/" title="ArcGIS Online"></a>
+            <a href="http://opendata.arcgis.com/" title="ArcGIS OpenData"></a>
+            <a href="http://resources.arcgis.com/en/home/" title="ArcGIS Resources"></a>
+            <a href="http://solutions.arcgis.com/" title="ArcGIS Solutions"></a>
+            <a href="https://blogs.msdn.microsoft.com/azuregov/" title="AzureGov blog"></a>
+            <a href="https://console.bluemix.net/dashboard/apps/" title="IBM Cloud"></a>
+            <a href="http://www.esri.com/videos/" title="Esri Videos"></a>
+            <a href="https://community.esri.com/" title="GeoNyet"></a>
+            <a href="http://www.sco.ca.gov/calaters.html" title="CalATERS"></a>
+            <a href="http://www.caltravelstore.com/" title="CalTravelStore"></a>
+            <a href="https://cdfwsp.wildlife.ca.gov/" title="CDFW SharePoint"></a>
+            <a href="https://ftp.wildlife.ca.gov/" title="FTP"></a>
+            <a href="https://anaconda.org/" title="Anaconda"></a>
+            <a href="https://bitbucket.org" title="BitBucket"></a>
+            <a href="https://github.com" title="GitHub"></a>
+            <a href="https://gitlab.com" title="GitLab"></a>
+            <a href="https://dashboard.heroku.com/" title="Heroku"></a>
+            <a href="https://developer.microsoft.com/en-us/" title="MS Developer"></a>
+            <a href="https://msdn.microsoft.com/en-us/default.aspx" title="MSDN"></a>
+            <a href="https://my.visualstudio.com/getstarted" title="My Visual Studio"></a>
+            <a href="https://trello.com/home" title="Trello"></a>
+            <a href="https://developers.arcgis.com/python/" title="Python"></a>
+            <a href="https://www.test-cors.org/"></a>
+            <a href="https://jsonlint.com/"></a>
+            <a href="https://esri.github.io"></a>
+            <a href="https://biosgis.github.io" style="display: none;"></a>
+            <a class="esri-icon-close" onclick="hidex(this.parentNode)"></a>
+        </aside>
         <main>
             <h2>
-                <a href="dfgis.html" style="color: white;"></a>
+                <a href="https://map.dfg.ca.gov/arcgis/">Map</a> Server
+            </h2>
+            <ol>
+                <li><a href="http://www.arcgis.com/">AGOL</a></li>
+                <li><a href="https://map.dfg.ca.gov/arcgis/">AGS</a></li>
+                <li><a href="https://map.dfg.ca.gov/ace/?log=off&msg=on">ACE</a></li>
+                <li><a href="https://map.dfg.ca.gov/bios/?bl=Streets&zl=8&log=off&msg=on">BIOS</a></li>
+                <li><a href="https://map.dfg.ca.gov/bios/?al=ds45&dslist=8,85,704,705,1002,1354,583,2652&log=off&msg=on">CNDDB</a></li>
+                <li><a href="https://map.dfg.ca.gov/bios/?bookmark=326&log=off&msg=on">NSO</a></li>
+                <li><a href="https://map.dfg.ca.gov/bios/?tool=cnddbQuick&log=off&msg=on">QuickViewer</a></li>
+                <li><a href="https://www.wildlife.ca.gov/Data/CNDDB/Submitting-Data">Field Survey</a></li>
+                <li><a href="https://map.dfg.ca.gov/fishing/?log=off&msg=on">FishingGuide</a></li>
+                <li><a href="https://map.dfg.ca.gov/sportfishingregs/">FishingRegs</a></li>
+                <li><a href="https://map.dfg.ca.gov/lands/?log=off&msg=on">Lands</a></li>
+                <li><a href="https://map.dfg.ca.gov/marine/?log=off&msg=on">Marine</a></li>
+                <li><a href="https://map.dfg.ca.gov/rarefind/view/rarefind.aspx">RareFind5</a></li>
+                <li></li>
+            </ol>
+            <h2>
+                <a href="https://www.wildlife.ca.gov">CDFW</a>
+                <a href="https://cdfw.maps.arcgis.com/home/">AGOL</a>
+                <a href="https://www.wildlife.ca.gov/Data/Analysis/Ace">Home</a>
+                <a href="https://www.wildlife.ca.gov/Data/BIOS">Home</a>
+                <a href="https://www.wildlife.ca.gov/Data/BIOS/Dataset-Index">Metadata&amp;Download</a>
+                <a href="ftp://ftp.dfg.ca.gov/BDB/GIS/BIOS/Public_Datasets/">FTP</a>
+                <a href="https://www.wildlife.ca.gov/Data/CNDDB">CNDDB</a>
+                <a href="https://www.wildlife.ca.gov/Fishing">Fishing</a>
+                <a href="https://nrm.dfg.ca.gov/habitrak/Default.aspx">HabiTrak</a>
+                <a href="https://www.wildlife.ca.gov/Conservation/Planning/Banking" class="small">CMB</a>
+                <a href="http://nrm.dfg.ca.gov/FishPlants/">Planting Schedule</a>
+                <a href="https://www.wildlife.ca.gov/Lands">Lands</a>
+                <a href="https://www.wildlife.ca.gov/Regions/Marine">Marine</a>
             </h2>
         </main>
         <footer>
