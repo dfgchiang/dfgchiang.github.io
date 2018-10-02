@@ -23,6 +23,29 @@ Copyright © 2018, State of Grace, Department of Fun and Games
         <link rel="stylesheet" href="css/dotty.css">
         <script src="js/abc.js"></script>
         <style>
+            h3 > a {
+                background-color: antiquewhite;
+                border: 1px solid silver;
+                border-radius: 5px;
+                line-height: 150%;
+                margin: 0 5px;
+                padding: 2px 5px;
+            }
+            h3 > a:hover {
+                background-color: ivory;
+                text-decoration: none;
+            }
+            h2 > a {
+                border-right: 2px solid silver;
+                line-height: 150%;
+                margin: 0;
+                padding: 2px 10px;
+            }
+            h2 > a:hover {
+                background-color: aliceblue;
+                border-right: 2px solid steelblue;
+                text-decoration: none;
+            }
         </style>
         <script>
             window.addEventListener('load', function () {
@@ -47,8 +70,7 @@ Copyright © 2018, State of Grace, Department of Fun and Games
             <a class="navlink" href="https://cdfw-my.sharepoint.com/personal/dean_chiang_wildlife_ca_gov/" title="OneNote">OneDrive</a>
             <a class="navlink" href="https://outlook.office365.com/owa/">OWA</a>
             <a class="navlink" href="https://cdfw.sharepoint.com/SitePages/Home.aspx">SharePoint</a>
-            <a class="navlink" href="https://dfgchiang.visualstudio.com/" title="Azure DevOps formerly Visual Studio Team Services">VSTS</a>
-            <a class="navlink" onclick="togglex(document.getElementsByTagName('aside')[0])" style="cursor: default;">&equiv;</a>
+            <a class="navlink" onclick="togglex(document.getElementsByTagName('aside')[0])" style="cursor: default; font-size: larger;">&equiv;</a>
         </nav>
         <aside style="display: none;">
             <a href="https://blogs.esri.com/esri/arcgis/" title="ArcGIS Blog"></a>
@@ -68,51 +90,47 @@ Copyright © 2018, State of Grace, Department of Fun and Games
             <a href="https://anaconda.org/" title="Anaconda"></a>
             <a href="https://bitbucket.org" title="BitBucket"></a>
             <a href="https://github.com" title="GitHub"></a>
+            <a href="https://esri.github.io"></a>
             <a href="https://gitlab.com" title="GitLab"></a>
+            <a href="https://visualstudio.com/" title="VSTS"></a>
             <a href="https://dashboard.heroku.com/" title="Heroku"></a>
             <a href="https://developer.microsoft.com/en-us/" title="MS Developer"></a>
             <a href="https://msdn.microsoft.com/en-us/default.aspx" title="MSDN"></a>
             <a href="https://my.visualstudio.com/getstarted" title="My Visual Studio"></a>
             <a href="https://trello.com/home" title="Trello"></a>
-            <a href="https://developers.arcgis.com/python/" title="Python"></a>
             <a href="https://www.test-cors.org/"></a>
             <a href="https://jsonlint.com/"></a>
-            <a href="https://esri.github.io"></a>
             <a href="https://biosgis.github.io" style="display: none;"></a>
             <a class="esri-icon-close" onclick="hidex(this.parentNode)"></a>
         </aside>
         <main>
             <h2>
-                <a href="https://map.dfg.ca.gov/arcgis/">Map</a> Server
+                CDFW Map apps:
+                <a href="https://map.dfg.ca.gov/arcgis/">AGS</a>
+                <a href="https://map.dfg.ca.gov/ace/">ACE</a>
+                <a href="https://map.dfg.ca.gov/bios/?bl=Streets&zl=8">BIOS</a>
+                <a href="https://map.dfg.ca.gov/bios/?al=ds45&dslist=8,85,704,705,1002,1354,583,2652">CNDDB</a>
+                <a href="https://map.dfg.ca.gov/bios/?bookmark=326">NSO</a>
+                <a href="https://map.dfg.ca.gov/bios/?tool=cnddbQuick">QuickViewer</a>
+                <a href="https://www.wildlife.ca.gov/Data/CNDDB/Submitting-Data">Field Survey</a>
+                <a href="https://map.dfg.ca.gov/fishing/">FishingGuide</a>
+                <a href="https://map.dfg.ca.gov/sportfishingregs/">FishingRegs</a>
+                <a href="https://map.dfg.ca.gov/lands/">Lands</a>
+                <a href="https://map.dfg.ca.gov/marine/">Marine</a>
+                <a href="https://map.dfg.ca.gov/rarefind/view/rarefind.aspx">RareFind5</a>
             </h2>
-            <ol>
-                <li><a href="http://www.arcgis.com/">AGOL</a></li>
-                <li><a href="https://map.dfg.ca.gov/arcgis/">AGS</a></li>
-                <li><a href="https://map.dfg.ca.gov/ace/?log=off&msg=on">ACE</a></li>
-                <li><a href="https://map.dfg.ca.gov/bios/?bl=Streets&zl=8&log=off&msg=on">BIOS</a></li>
-                <li><a href="https://map.dfg.ca.gov/bios/?al=ds45&dslist=8,85,704,705,1002,1354,583,2652&log=off&msg=on">CNDDB</a></li>
-                <li><a href="https://map.dfg.ca.gov/bios/?bookmark=326&log=off&msg=on">NSO</a></li>
-                <li><a href="https://map.dfg.ca.gov/bios/?tool=cnddbQuick&log=off&msg=on">QuickViewer</a></li>
-                <li><a href="https://www.wildlife.ca.gov/Data/CNDDB/Submitting-Data">Field Survey</a></li>
-                <li><a href="https://map.dfg.ca.gov/fishing/?log=off&msg=on">FishingGuide</a></li>
-                <li><a href="https://map.dfg.ca.gov/sportfishingregs/">FishingRegs</a></li>
-                <li><a href="https://map.dfg.ca.gov/lands/?log=off&msg=on">Lands</a></li>
-                <li><a href="https://map.dfg.ca.gov/marine/?log=off&msg=on">Marine</a></li>
-                <li><a href="https://map.dfg.ca.gov/rarefind/view/rarefind.aspx">RareFind5</a></li>
-                <li></li>
-            </ol>
             <h2>
-                <a href="https://www.wildlife.ca.gov">CDFW</a>
+                <a href="https://www.wildlife.ca.gov" style="border: none;">CDFW</a> pages:
                 <a href="https://cdfw.maps.arcgis.com/home/">AGOL</a>
-                <a href="https://www.wildlife.ca.gov/Data/Analysis/Ace">Home</a>
-                <a href="https://www.wildlife.ca.gov/Data/BIOS">Home</a>
+                <a href="https://www.wildlife.ca.gov/Data/Analysis/Ace">ACE</a>
+                <a href="https://www.wildlife.ca.gov/Data/BIOS">BIOS</a>
                 <a href="https://www.wildlife.ca.gov/Data/BIOS/Dataset-Index">Metadata&amp;Download</a>
                 <a href="ftp://ftp.dfg.ca.gov/BDB/GIS/BIOS/Public_Datasets/">FTP</a>
                 <a href="https://www.wildlife.ca.gov/Data/CNDDB">CNDDB</a>
                 <a href="https://www.wildlife.ca.gov/Fishing">Fishing</a>
                 <a href="https://nrm.dfg.ca.gov/habitrak/Default.aspx">HabiTrak</a>
-                <a href="https://www.wildlife.ca.gov/Conservation/Planning/Banking" class="small">CMB</a>
-                <a href="http://nrm.dfg.ca.gov/FishPlants/">Planting Schedule</a>
+                <a href="https://www.wildlife.ca.gov/Conservation/Planning/Banking" title="Conservation Mitigation Banks">CMB</a>
+                <a href="http://nrm.dfg.ca.gov/FishPlants/">Fish Planting Schedule</a>
                 <a href="https://www.wildlife.ca.gov/Lands">Lands</a>
                 <a href="https://www.wildlife.ca.gov/Regions/Marine">Marine</a>
             </h2>
