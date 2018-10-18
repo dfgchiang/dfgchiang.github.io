@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>js date</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://dfgchiang.github.io/js/dotty.js"></script>
+        <script>
+            function getdates() {
+                var d = new Date();
+                $('newdate').innerHTML = d;
+                $('now').innerHTML = Date.now();
+                $('getTime').innerHTML = d.getTime();
+                $('toLocaleDateString').innerHTML = d.toLocaleDateString();
+                $('toLocaleTimeString').innerHTML = d.toLocaleTimeString();
+                $('toLocaleString').innerHTML = d.toLocaleString();
+                $('toDateString').innerHTML = d.toDateString();
+                $('toTimeString').innerHTML = d.toTimeString();
+                $('toString').innerHTML = d.toString();
+                $('toISOString').innerHTML = d.toISOString();
+                $('toUTCString').innerHTML = d.toUTCString();
+                var s = d.toLocaleString().replace(',', '');
+                $('special').innerHTML = s;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>JavaScript Date Formatting</h1>
+        </header>
+        <main>
+            <h2>Desired Format (MM/DD/YYYY hh:mm:ss): <span id="special"></span></h2>
+            <button onclick="getdates()">See Date Formats</button>
+            <table>
+                <tr>
+                    <th>Method</th><TH>Output</TH>
+                </tr>
+                <tr>
+                    <th>Default</th><td id="newdate"></td>
+                </tr>
+                <tr>
+                    <th>now</th><td id="now"></td>
+                </tr>
+                <tr>
+                    <th>getTime</th><td id="getTime"></td>
+                </tr>
+                <tr>
+                    <th>toISOString</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>toUTCString</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>toDateString</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>toTimeString</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>toString</th><td id="toString"></td>
+                </tr>
+                <tr>
+                    <th>toLocaleDateString</th><td id="toLocaleDateString"></td>
+                </tr>
+                <tr>
+                    <th>toLocaleTimeString</th><td id="toLocaleTimeString"></td>
+                </tr>
+                <tr>
+                    <th>toLocaleString</th><td id="toLocaleString"></td>
+                </tr>
+                <tr>
+                    <th>getDate</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>getFullYear</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>getHours</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>getMilliseconds</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>getMinutes</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>getMonth</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>getSeconds</th><td id="xxx"></td>
+                </tr>
+                <tr>
+                    <th>xxx</th><td id="xxx"></td>
+                </tr>
+            </table>
+        </main>
+    </body>
+</html>
