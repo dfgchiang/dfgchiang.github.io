@@ -9,6 +9,41 @@ and open the template in the editor.
         <title>js date</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Consolas, Monaco, monospace;
+                font-size: 110%;
+            }
+            button {
+                font-size: 110%;
+            }
+            footer {
+                background-color: ghostwhite;
+                border-top: 1px solid silver;
+                margin-top: 1%;
+            }
+            header {
+                background-color: whitesmoke;
+                border-bottom: 1px solid silver;
+            }
+            h1 {
+                margin-top: 0;
+            }
+            main {
+                padding: 1%;
+            }
+            table {
+                border: 1px solid silver;
+            }
+            th {
+                border: 1px solid dimgray;
+                padding: 5px;
+            }
+            td {
+                border: 1px solid gray;
+                padding: 5px;
+            }
+        </style>
         <script src="https://dfgchiang.github.io/js/dotty.js"></script>
         <script>
             function getdates() {
@@ -24,8 +59,19 @@ and open the template in the editor.
                 $('toString').innerHTML = d.toString();
                 $('toISOString').innerHTML = d.toISOString();
                 $('toUTCString').innerHTML = d.toUTCString();
+                $('getFullYear').innerHTML = d.getFullYear();
+                $('getMonth').innerHTML = d.getMonth() + 1;
+                $('getDate').innerHTML = d.getDate();
+                $('getHours').innerHTML = d.getHours();
+                $('getMinutes').innerHTML = d.getMinutes();
+                $('getSeconds').innerHTML = d.getSeconds();
+                $('getMilliseconds').innerHTML = d.getMilliseconds();
                 var s = d.toLocaleString().replace(',', '');
-                $('special').innerHTML = s;
+                $('agoldate').innerHTML = s;
+                var t = d.toISOString();
+                var ymd = t.substr(0, 10).replace(/-/g, '');
+                var hms = t.substr(11, 11).replace(/\:/g, '').replace('.', '');
+                $('numdate').innerHTML = ymd + hms;
             }
         </script>
     </head>
@@ -34,7 +80,8 @@ and open the template in the editor.
             <h1>JavaScript Date Formatting</h1>
         </header>
         <main>
-            <h2>Desired Format (MM/DD/YYYY hh:mm:ss): <span id="special"></span></h2>
+            <h2>Format (MM/DD/YYYY hh:mm:ss): <span id="agoldate"></span></h2>
+            <h3>Format (YYYYMMDDhhmmsstt): <span id="numdate"></span></h3>
             <button onclick="getdates()">See Date Formats</button>
             <table>
                 <tr>
@@ -50,19 +97,22 @@ and open the template in the editor.
                     <th>getTime</th><td id="getTime"></td>
                 </tr>
                 <tr>
-                    <th>toISOString</th><td id="xxx"></td>
+                    <th>toISOString</th><td id="toISOString"></td>
                 </tr>
                 <tr>
-                    <th>toUTCString</th><td id="xxx"></td>
-                </tr>
-                <tr>
-                    <th>toDateString</th><td id="xxx"></td>
-                </tr>
-                <tr>
-                    <th>toTimeString</th><td id="xxx"></td>
+                    <th>toUTCString</th><td id="toUTCString"></td>
                 </tr>
                 <tr>
                     <th>toString</th><td id="toString"></td>
+                </tr>
+                <tr>
+                    <th>toDateString</th><td id="toDateString"></td>
+                </tr>
+                <tr>
+                    <th>toTimeString</th><td id="toTimeString"></td>
+                </tr>
+                <tr>
+                    <th>toLocaleString</th><td id="toLocaleString"></td>
                 </tr>
                 <tr>
                     <th>toLocaleDateString</th><td id="toLocaleDateString"></td>
@@ -71,33 +121,36 @@ and open the template in the editor.
                     <th>toLocaleTimeString</th><td id="toLocaleTimeString"></td>
                 </tr>
                 <tr>
-                    <th>toLocaleString</th><td id="toLocaleString"></td>
+                    <th>getFullYear</th><td id="getFullYear"></td>
                 </tr>
                 <tr>
-                    <th>getDate</th><td id="xxx"></td>
+                    <th>getMonth</th><td id="getMonth"></td>
                 </tr>
                 <tr>
-                    <th>getFullYear</th><td id="xxx"></td>
+                    <th>getDate</th><td id="getDate"></td>
                 </tr>
                 <tr>
-                    <th>getHours</th><td id="xxx"></td>
+                    <th>getHours</th><td id="getHours"></td>
                 </tr>
                 <tr>
-                    <th>getMilliseconds</th><td id="xxx"></td>
+                    <th>getMinutes</th><td id="getMinutes"></td>
                 </tr>
                 <tr>
-                    <th>getMinutes</th><td id="xxx"></td>
+                    <th>getSeconds</th><td id="getSeconds"></td>
                 </tr>
                 <tr>
-                    <th>getMonth</th><td id="xxx"></td>
-                </tr>
-                <tr>
-                    <th>getSeconds</th><td id="xxx"></td>
-                </tr>
-                <tr>
-                    <th>xxx</th><td id="xxx"></td>
+                    <th>getMilliseconds</th><td id="getMilliseconds"></td>
                 </tr>
             </table>
         </main>
+        <footer>
+            <script>
+                var brk = '<br>';
+                document.write('&copy;' + document.lastModified + brk);
+                document.write('&bull; URL Referer: ' + document.referrer + brk);
+                document.write('&diams; Browser Client: ' + navigator.userAgent + ' on ' + navigator.platform + brk);
+                document.write('&rect; Window Size: ' + window.innerWidth + 'x' + window.innerHeight + brk);
+            </script>
+        </footer>
     </body>
 </html>
