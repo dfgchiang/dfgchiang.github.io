@@ -60,7 +60,7 @@ and open the template in the editor.
                 $('toISOString').innerHTML = d.toISOString();
                 $('toUTCString').innerHTML = d.toUTCString();
                 $('getFullYear').innerHTML = d.getFullYear();
-                $('getMonth').innerHTML = d.getMonth() + 1;
+                $('getMonth').innerHTML = d.getMonth();
                 $('getDate').innerHTML = d.getDate();
                 $('getHours').innerHTML = d.getHours();
                 $('getMinutes').innerHTML = d.getMinutes();
@@ -69,9 +69,9 @@ and open the template in the editor.
                 var s = d.toLocaleString().replace(',', '');
                 $('agoldate').innerHTML = s;
                 var t = d.toISOString();
-                var ymd = t.substr(0, 10).replace(/-/g, '');
-                var hms = t.substr(11, 11).replace(/\:/g, '').replace('.', '');
-                $('numdate').innerHTML = ymd + hms;
+                var ymd = t.substr(0, 10).replace(/-/g, '');//(2, 8) for 6-digit yymmdd
+                var hns = t.substr(11, 11).replace(/\:/g, '').replace('.', '');
+                $('numdate').innerHTML = ymd + hns;
             }
         </script>
     </head>
