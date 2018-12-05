@@ -46,25 +46,51 @@ footer {
     padding: 5px;
 }
 h1 {
-    font-family: 'Arial Black', Tahoma, Impact, fantasy;
+    font-family: 'Arial Black', Impact, fantasy;
     margin-top: 0;
 }
 h2 {
-    border-top: 1px solid snow;
-    font-family: Georgia, serif;
+    border-top: 1px solid floralwhite;
+    color: darkslategray;
+    font-family: Arial, helvetica, sans-serif;
 }
 h3 {
-    border-bottom: 1px solid floralwhite;
+    border-top: 1px solid snow;
     color: steelblue;
-    font-family: Verdana, Tahoma, monospace;
+    font-family: Georgia, serif;
 }
 h4 {
-    color: darkslategray;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, monospace;
 }
 h5 {
     font-family: 'Comic Sans MS', cursive;
+    font-size: larger;
     font-variant: small-caps;
+}
+h2 > a {
+    border-right: 1px solid slategray;
+    line-height: 150%;
+    margin: 0;
+    padding: 2px 10px;
+}
+h2 > a:hover {
+    background-color: aliceblue;
+    border-right: 1px solid transparent;
+    text-decoration: none;
+}
+h2 > input {
+    font-size: 80%;
+}
+h3 > a {
+    border-right: 1px solid lightsteelblue;
+    line-height: 150%;
+    margin: 0 5px;
+    padding: 1px 5px;
+}
+h3 > a:hover {
+    background-color: mintcream;
+    border-right: 1px solid transparent;
+    text-decoration: none;
 }
 header {
     background-color: whitesmoke;
