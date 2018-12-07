@@ -311,31 +311,48 @@ tr.odd:hover {
 .smaller {
     font-size: smaller;
 }
-.bug {
-    border: 1px solid crimson;
-    border-width: 1px 5px 1px 0px;
+.bug  {
+    border-right: 4px solid crimson;
+    border-width: 0;
+    color: firebrick;
+    font-weight: bold;
     line-height: 123%;
     margin: 2px;
     padding: 2px;
 }
-.todo {
-    border-left: 5px solid khaki;
-    color: maroon;
+.issue  {
+    border-width: 0;
+    color: fuchsia;
+    font-style: italic;
+    line-height: 123%;
+    margin: 2px;
+    padding: 2px;
+}
+.rule  {
+    border-width: 0;
+    color: brown;
+    line-height: 123%;
+    margin: 2px;
+    padding: 2px;
+}
+.todo  {
+    border-width: 0;
+    color: tomato;
     line-height: 123%;
     margin: 2px;
     padding: 2px;
 }
 .doing {
-    border: 1px solid lightgreen;
-    border-width: 1px 5px 1px 0px;
+    border-right: 4px solid lightgreen;
+    border-width: 0;
     line-height: 123%;
     margin: 2px;
     padding: 2px;
 }
 .done {
-    border-right: 5px solid lightsteelblue;
+    border-right: 4px solid lightsteelblue;
+    border-width: 0;
     color: darkslateblue;
-    font-weight: bold;
     line-height: 123%;
     margin: 2px;
     padding: 2px;
