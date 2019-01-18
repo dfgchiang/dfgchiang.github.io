@@ -1,0 +1,106 @@
+/*
+Copyright © 2019, State of Grace, Department of Fun and Games
+[MIT License](https://mit-license.org/)
+[GNU GPL v3](https://www.gnu.org/licenses/)
+[open-license](https://project-open-data.cio.gov/open-licenses/)
+[OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+*/
+/* 
+    Created on : Jan 16, 2019, 1:24:03 PM
+    Author     : dchiang
+*/
+body {
+    /*background-color: floralwhite;*/
+    font-family: Consolas, Monaco, 'Comic Sans MS', Courier, monospace;
+    font-size: 150%;
+    margin: 0;
+    padding: 0;
+}
+aside {
+    background-color: azure;
+    border: 1px solid silver;
+    box-shadow: 5px 10px #888;
+    float: right;
+    padding-left: 10px;
+}
+details {
+    border-bottom: 1px solid lavender;
+    margin: 1px 2px 3px 4px;
+    overflow: auto;
+    padding-left: 5px;
+}
+details > ol {
+    margin-left: 2%;
+}
+footer {
+    background-color: ghostwhite;
+    border-top: 1px solid silver;
+    margin-top: 20px;
+    padding: 10px;
+}
+header {
+    background-color: whitesmoke;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+}
+header h1 {
+    margin: 0;                
+}
+h1 {
+    margin-top: 0;
+}
+h2 {
+    font-family: Georgia, serif;
+}
+main {
+    padding: 10px;
+}
+nav {
+    background-color: snow;
+    border-bottom: 1px solid silver;
+    overflow: hidden;
+}
+nav > a {
+    border: 1px solid transparent;
+    border-left: 1px solid silver;
+    cursor: default;
+    font-size: 150%;
+    padding: 0 10px;
+    text-decoration: none;
+}
+nav > a:hover {
+    background-color: ghostwhite;
+    /*border-right: 1px solid silver;*/
+    text-decoration: overline;
+}
+ol.bl {
+    border-bottom: 0px solid steelblue;
+    margin-bottom: 20px;
+}
+ol.bl li {
+    border-bottom: 1px solid lightblue;
+    font-weight: bold;
+    line-height: 200%;
+}
+.togl {
+    border: 1px solid silver;
+    cursor: default;
+    font-size: 200%;
+    float: right;
+    padding: 0 8px;
+}
+.togl:hover {
+    background-color: aliceblue;
+}
+.bug {
+    color: firebrick;
+    font-weight: bold;
+}
+.done {
+    color: dimgray;
+    font-weight: bold;
+}
+.issue {
+    color: purple;
+    font-style: italic;
+}
