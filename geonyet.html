@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>geonyet</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: Georgia, Consolas, Monaco, monospace;
+                font-size: 150%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            GeoNyet
+        </h1>
+        <p>
+            I wish Esri have a better way of building networks of people who are in the same "boat" - 
+            I mean people working under similar technical environments and implementations, 
+            and handling similar types and amount of data. 
+            When a group is simply called Geodatabase, 
+            does that mean some tabular operations in a single file geodatabase 
+            or managing multiple SQL Server instances on remote virtual machines? 
+            Working with those 2 technical areas are very different situations, 
+            and I doubt they encounter many similar issues.
+        </p>
+        <p>
+            People should be not group together simply based on a broad topic such as Python or ArcGIS Server. 
+            Different projects can have vastly different scope and scale of application 
+            even though people attempt with the same technology. 
+            Projects of similar size and goals and objectives have more in common 
+            regardless of the API initially applied to it than projects using the same API and platform 
+            but having very different objectives and resources.
+        </p>
+        <h2>
+            Serving Lots and Lots of Services
+        </h2>
+        <p>
+            I am curious what is the scale of data and services are people serving and managing out there?
+        </p>
+        <p>
+            We are serving out thousands of datasets over a couple hundred map services on an Enterprise licensed ArcGIS Server. The Server sits on a virtual server that can have as much resource allocated to it as required, so CPU, RAM and disk spaces are non-issues. Anyway we never see the server performance maxed out. The services can be dynamically added and used in web mapping applications. The map services data reside in SDE on a SQL Server instance. Some of these feature classes are very large or dense datasets that span multiple counties up to the size of the State of California. As we added more and more datasets and services, lately the ArcGIS Server performance are unpredictable at best, and can slow to a crawl when many users are using the web app, but we are having a hard time pinpointing where is the bottleneck. Have others experienced similar problems?
+        </p>
+        <p>
+            It has been very difficult to get a working answer or online documentation or guide somewhere to explain the technical limitations of Server. What is the maximum number of map services a single Server can serve out as dynamic map services? Approximately how many datasets or amount of data can Server handle? What is the maximum number of Server connections to a SDE database that is recommended? What is an outrageous number of feature classes in a SDE database? Should we spread our data collection across more SDE databases than we already do? Do folks who work in major entities like USGS or EPA have similar questions? I just don't come across many on-premise implementations that is similar to ours as described by people writing in GeoNet.
+        </p>
+        <p>
+            If it is not a military or industrial secret, Esri ought to publish a list of organizations or groups that are serving out the most amount of data, highest number of services, highest number of datasets, greatest geographic extent of data, highest number of applications, highest number of users, etc. So that other organizations do no feel alone and can contact each other for mutual support.
+        </p>
+        <h2>Services with Nested Group Layers</h2>
+        <p></p>
+        <h2>Map Gallery</h2>
+        <p>
+            Better spatial layout for separating maps and presentations by geography 
+            and scale - city, county, region, province, nation, continent grouped together 
+            under clear banners in different parts of the gallery 
+            so people can compare and contrast solutions at similar scale, 
+            instead of highlighting special interests and making the rest a mess.
+        </p>
+        <h2>Agenda App</h2>
+        <p>
+            Agenda planner should have larger font size and clearer text color. The text was very hard to read. Each session item should always include the following most important complete basic info - which day/date, what time, which room, repeated or one-time only.. Then just put the hot link on the topic title to the detail description.
+        </p>
+        <h2>Suggestion to Improve the Conference</h2>
+        <p>
+            Make sure rooms where hot topics are presented - industry trends and 
+            technical advancements that Esri itself is emphasizing, 
+            such as Big Data and Machine Learning - are sufficiently large 
+            enough to accommodate the large crowd expected.
+        </p>
+        <h2>Additional Feedback</h2>
+        <p>
+            Make spread sheet of the agenda schedule available. 
+            Publish the agenda schedule as open data table in raw data format 
+            for users to use at their discretion.
+        </p>
+    </body>
+</html>
