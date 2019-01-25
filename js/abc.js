@@ -398,6 +398,12 @@ function swapt(id, a, b) {
         $(id).innerHTML = b;
     }
 }
+function toggledetails(bool) {
+    let tags = document.getElementsByTagName('details');
+    for (let i = 0; i < tags.length; i++) {
+        tags[i].open = bool;
+    }
+}
 // Get URL filedirname for window_location_pathname--20160302
 function urldir(pathname) {
     var path = pathname.slice(1);

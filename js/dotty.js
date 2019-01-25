@@ -170,5 +170,10 @@ function showhidden(id) {
     }
 }
 
-//20171206 Created autolink in poplinks instead of ablinks
+function toggledetails(bool) {
+    let tags = document.getElementsByTagName('details');
+    for (let i = 0; i < tags.length; i++) {
+        tags[i].open = bool;
+    }
+}
 
