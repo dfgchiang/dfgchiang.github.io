@@ -39,6 +39,7 @@ footer {
     padding: 10px;
 }
 header {
+    position: relative; top: 0;
     background-color: whitesmoke;
     border-bottom: 1px solid silver;
     padding: 10px;
@@ -97,10 +98,13 @@ ol.bl li {
     font-weight: bold;
 }
 .done {
-    color: dimgray;
+    color: done;
     font-weight: bold;
 }
 .issue {
-    color: purple;
+    color: magenta;
     font-style: italic;
+}
+.oandm {/*OperationAndMaintenance*/
+    color: teal;
 }
