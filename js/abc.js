@@ -749,3 +749,33 @@ var DFGCOLORS = {
     "sootheblue": "014e77",
     "colorname": "hexvalue"
 };
+//========================================
+//--- BIOS SPECIALIZED FUNCTIONS--20190128
+//========================================
+function geturlkeyal() {
+    // CONFORM BIOSDS VALUE IN URLSEARCH PARAM AL--20190128
+    var al = null;
+    if (location.search.indexOf('al=') > 0) {
+        var val = location.search.split('al=')[1].split('&')[0];
+        if (val !== undefined && val !== null) {
+            var dsid = parseInt(val.toLowerCase().replace('biosds', '').replace('ds', ''));
+            if (typeof dsid === 'number') {
+                var al = 'biosds' + dsid;
+            } else {
+                al = val;
+            }
+        }
+    }
+    return al;
+}
+function geturlarg(key) {
+    // GET LOCATION.SEARCH PARAMETER KEY VALUE--20190128
+    var val = '';
+    if (location.search.indexOf(key + '=') > 0) {
+        var val = location.search.split(key + '=')[1].split('&')[0];
+        if (val !== undefined && val !== null & val !== '') {
+            val = decodeURIComponent(val);
+        }
+    }
+    return val;
+}
