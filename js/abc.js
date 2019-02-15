@@ -6,7 +6,7 @@ Copyright © 2019, State of Grace, Department of Fun and Games
 [OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 [FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
  */
-// abc.js 20140910 dfgchiang 20180919
+// abc.js 20140910 dfgchiang 20190214
 // All Basic Convenience Generic Helper fxns
 var br = "<br />";
 var rv = (Math.random() * 10).toFixed(5);
@@ -57,6 +57,17 @@ function ajaxget(url, callback) {
     };
     xhr.open('GET', url, true);
     xhr.send();
+}
+function ajaxpost(f, s) {
+    var xhttp = new XMLHttpRequest();
+    //xhttp.onreadystatechange = function () {
+    //    if (this.readyState == 4 && this.status == 200) {
+    //        console.log(this.responseText);
+    //    }
+    //};
+    xhttp.open("POST", f, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(s);
 }
 function parson(response) {
     if (typeof response !== 'object') {
