@@ -89,16 +89,15 @@ ol li {
     line-height: 200%;
 }
 pre {
-    background-color: navajowhite;
+    background-color: ghostwhite;
+    border-left: 5px solid gainsboro;
     font-family: Courier New, Courier, monospace;
-    margin-left: 8px;
-    padding: 4px;
+    padding: 5px;
 }
 pre.cmd {
     background-color: black;
-    border: 2px solid silver;
+    border-left: 5px solid silver;
     color: white;
-    padding: 5px;
 }
 span.go {
     border-right: 1px solid silver;
