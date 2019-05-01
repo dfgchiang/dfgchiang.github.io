@@ -790,3 +790,13 @@ function geturlarg(key) {
     }
     return val;
 }
+function cssweep(cssname, msg) {
+    if (msg === undefined || msg === null) {
+        var msg = '';
+    }
+    var tags = document.getElementsByClassName(cssname);
+    for (var i = 0; i < tags.length; i++) {
+        tags[i].innerHTML = msg;
+    }
+    return tags.length;
+}
