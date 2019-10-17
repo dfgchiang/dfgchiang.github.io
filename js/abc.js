@@ -128,7 +128,7 @@ function poplinks() {
                 if (a.title !== '') {
                     a.innerHTML = a.title;
                 } else {
-                    a.innerHTML = a.href.replace('https://', '//').replace('http://', '//').replace(/\/$/, '').replace('www.', '');//.replace(/\.(com|gov|net|org|io)/, '')
+                    a.innerHTML = a.href.replace('https://', '').replace('http://', '').replace(/\/$/, '').replace('www.', '');//.replace(/\.(com|gov|net|org|io)/, '')
                 }
                 a.innerHTML += '<br/>';
             }
