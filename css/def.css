@@ -1,0 +1,233 @@
+/*
+def.css 20191211 dfgchiang
+Copyright © 2019, State of Grace, Department of Fun and Games
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+[FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
+[GNU GPL v3](https://www.gnu.org/licenses/)
+[MIT License](https://mit-license.org/)
+[open-license](https://project-open-data.cio.gov/open-licenses/)
+[OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+*/
+/* 
+    Created on : Dec 11, 2019, 11:43:24 AM
+    Author     : DCHIANG
+*/
+body {
+    font-size: 123%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+article {
+    border-bottom: 1px solid navajowhite;
+}
+
+aside {
+    position: relative;
+    background-color: white;
+    border: 1px solid silver;
+    box-shadow: gray -5px 5px 5px;
+    float: right;
+    padding: 1%;
+    z-index: 200;
+}
+code {
+    background-color: ghostwhite;
+    color: dimgray;
+    margin: 1px 8px;
+}
+
+details {
+    margin: 5px;
+    padding-left: 1%;
+}
+details ol {
+    margin-left: 1%;
+}
+
+footer {
+    position: relative;
+    border-top: 1px solid silver;
+    font-family: monospace;
+    font-size: smaller;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+h1 {
+    font-family: fantasy;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: relative;
+}
+
+h2 {
+    border-top: 1px solid floralwhite;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+h3 {
+    font-family: Georgia, serif;
+    position: relative;
+}
+
+h4 {
+    font-family: Verdana, sans-serif;
+    position: relative;
+}
+
+h5 {
+    font-family: 'Comic Sans MS', cursive;
+    position: relative;
+}
+
+h6 {
+    font-family: Consolas, Monaco, monospace;
+}
+
+header {
+    position: relative;
+    border-bottom: 1px solid silver;
+    padding: 1%;
+}
+
+li {
+    border-top: 1px solid lavender;
+    line-height: 150%;
+    padding: 2px 0;
+}
+
+main {
+    padding: 1%;
+    position: relative;
+}
+
+nav {
+    border-bottom: 1px solid silver;
+    margin: 0;
+    padding: 1px;
+    position: relative;
+}
+
+nav a {
+    border-right: 1px solid gainsboro;
+    padding: 0 8px;
+}
+nav ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    border-right: 1px solid silver;
+    display: inline;
+    margin: 0;
+    padding: 2px 8px;
+}
+
+nav li:hover {
+    background-color: azure;
+}
+
+ol {
+    border-bottom: 1px solid azure;
+}
+
+pre {
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-width: 2px 0 0 8px;
+    font-size: smaller;
+    line-height: 1em;
+    padding: 2px 8px;
+}
+pre.cmd {
+    background-color: black;
+    border-width: 8px 0 0 2px;
+    color: white;
+}
+
+summary {
+    font-size: larger;
+    font-style: italic;
+    font-weight: bold;
+}
+.bug {
+    border-right: 5px solid crimson;
+    color: red;
+    font-weight: bold;
+}
+
+.bugfix {
+    color: brown;
+}
+
+.doing {
+    border-right: 5px solid yellow;
+    color: rebeccapurple;
+}
+
+.done {
+    color: green;
+}
+
+.future {
+    color: dodgerblue;
+}
+
+.hide {
+    display: none;
+}
+
+.issue {
+    color: magenta;
+    font-style: italic;
+}
+
+.msgx {
+    display: none;
+}
+.oandm {
+    /*OperationAndMaintenance*/
+    color: teal;
+}
+
+.rule {
+    color: slategray;
+    font-family: fantasy;
+    font-weight: bold;
+}
+.sidebar {
+    position: relative;
+    background-color: white;
+    border: 1px solid silver;
+    box-shadow: gray -5px 5px 5px;
+    float: right;
+    padding: 1%;
+    z-index: 200;                
+}
+
+.todo {
+    color: tomato;
+}
+
+.togl {
+    background-color: floralwhite;
+    border: 1px solid silver;
+    cursor: default;
+    font-size: 200%;
+    padding: 0 8px;
+}
+
+.togl:hover {
+    background-color: aliceblue;
+}
+

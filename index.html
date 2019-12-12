@@ -2,10 +2,9 @@
 <!--
 Copyright © 2019, State of Grace, Department of Fun and Games
 [MIT License](https://mit-license.org/)
-[GNU GPL v3](https://www.gnu.org/licenses/)
+[FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
 [open-license](https://project-open-data.cio.gov/open-licenses/)
 [OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
-[FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
 -->
 <html>
     <head>
@@ -18,42 +17,39 @@ Copyright © 2019, State of Grace, Department of Fun and Games
         <meta name="robots" content="noindex, nofollow, noarchive">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://js.arcgis.com/4.10/esri/css/main.css">
-        <script src="https://js.arcgis.com/4.10/"></script>
-        <link rel="stylesheet" href="css/dotty.css">
-        <link rel="stylesheet" href="css/dada.css">
+        <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css" />
+        <script src="https://js.arcgis.com/4.13/"></script>
+        <link rel="stylesheet" href="css/def.css">
         <script src="js/abc.js"></script>
         <style>
             body {
-                font-family: Consolas, Monaco, monospace;
-                font-size: 123%;
+                font-size: 133%;
             }
         </style>
-        <script>
-            window.addEventListener('load', function () {
-                console.log('Window loaded');
-                om = poplinks();
-            });
-        </script>
     </head>
     <body>
-        <header>
-            <h1>DFGIS Development</h1>
-        </header>
         <nav>
-            <a class="navlink" href="https://www.arcgis.com">AGOL</a>
-            <a class="navlink" href="https://map.dfg.ca.gov/arcgis/">AGS</a>
-            <a class="navlink" href="https://developers.arcgis.com/dashboard" title="ArcGIS Developers Dashboard">ArcDev</a>
-            <a class="navlink" href="https://portal.azure.com/" title="Azure Portal Dashboard">Azure</a>
-            <a class="navlink" href="https://dev.azure.com/dfgchiang/" title="Azure DevOps formerly Visual Studio Team Services">AzureDev</a>
-            <a class="navlink" href="https://portal.azure.us/" title="Azure Government Dashboard">AzureGov</a>
-            <a class="navlink" href="https://map.dfg.ca.gov/bios?log=off&msg=on">BIOS</a>
-            <a class="navlink" href="https://github.com/cdfw">GitHub</a>
-            <a class="navlink" href="https://cdfw-my.sharepoint.com/personal/dean_chiang_wildlife_ca_gov/" title="OneNote">OneDrive</a>
-            <a class="navlink" href="https://outlook.office365.com/owa/">OWA</a>
-            <a class="navlink" href="https://cdfw.sharepoint.com/SitePages/Home.aspx">SharePoint</a>
-            <a class="navlink" onclick="togglex(document.getElementsByTagName('aside')[0])" style="cursor: default; font-size: larger;">&equiv;</a>
+            <a href="https://www.arcgis.com">AGOL</a>
+            <a href="https://map.dfg.ca.gov/arcgis/">AGS</a>
+            <a href="https://developers.arcgis.com/dashboard" title="ArcGIS Developers Dashboard">ArcDev</a>
+            <a href="https://portal.azure.com/" title="Azure Portal Dashboard">Azure</a>
+            <a href="https://dev.azure.com/dfgchiang/" title="Azure DevOps formerly Visual Studio Team Services">AzureDev</a>
+            <a href="https://portal.azure.us/" title="Azure Government Dashboard">AzureGov</a>
+            <a href="https://map.dfg.ca.gov/bios?log=off&msg=on">BIOS</a>
+            <a href="https://github.com/cdfw">GitHub</a>
+            <a href="https://cdfw-my.sharepoint.com/personal/dean_chiang_wildlife_ca_gov/" title="OneNote">OneDrive</a>
+            <a href="https://outlook.office365.com/owa/">OWA</a>
+            <a href="https://cdfw.sharepoint.com/SitePages/Home.aspx">SharePoint</a>
+            <a onclick="togglex(document.getElementsByTagName('aside')[0])" style="cursor: default; font-size: 150%; text-decoration: none; line-height: 100%;">&equiv;</a>
         </nav>
+        <header>
+            <span style="float: right; font-size: smaller; margin: 5px;">
+                <script type="text/javascript">
+                    document.write(document.lastModified);
+                </script>
+            </span>
+            <h1>DFGIS Web Development</h1>
+        </header>
         <aside style="display: none;">
             <a href="https://blogs.esri.com/esri/arcgis/" title="ArcGIS Blog"></a>
             <a href="https://developers.arcgis.com" title="ArcGIS Developers"></a>
@@ -62,11 +58,16 @@ Copyright © 2019, State of Grace, Department of Fun and Games
             <a href="http://resources.arcgis.com/en/home/" title="ArcGIS Resources"></a>
             <a href="http://solutions.arcgis.com/" title="ArcGIS Solutions"></a>
             <a href="https://blogs.msdn.microsoft.com/azuregov/" title="AzureGov blog"></a>
-            <a href="https://console.bluemix.net/dashboard/apps/" title="IBM Cloud"></a>
             <a href="http://www.esri.com/videos/" title="Esri Videos"></a>
             <a href="https://community.esri.com/" title="GeoNyet"></a>
             <a href="http://www.sco.ca.gov/calaters.html" title="CalATERS"></a>
             <a href="http://www.caltravelstore.com/" title="CalTravelStore"></a>
+            <a href="https://gis-california.opendata.arcgis.com/" title="California State Geoportal"></a>
+            <a href="https://github.com/Office-of-Digital-Innovation" title="CA State Templates"></a>
+            <a href="https://data-cdfw.opendata.arcgis.com/" title="CDFW Open Data"></a>
+            <a href="https://data.cnra.ca.gov/" data-title="CNRA Open Data"></a>
+            <a href="https://data.ca.gov/" data-title="California Open Data Portal"></a>
+            <a href="https://creativecommons.org/choose/" title="Creative Commons"></a>
             <a href="https://cdfwsp.wildlife.ca.gov/" title="CDFW SharePoint"></a>
             <a href="https://ftp.wildlife.ca.gov/" title="FTP"></a>
             <a href="https://anaconda.org/" title="Anaconda"></a>
@@ -76,6 +77,7 @@ Copyright © 2019, State of Grace, Department of Fun and Games
             <a href="https://gitlab.com" title="GitLab"></a>
             <a href="https://visualstudio.com/" title="VSTS"></a>
             <a href="https://dashboard.heroku.com/" title="Heroku"></a>
+            <a href="https://console.bluemix.net/dashboard/apps/" title="IBM Cloud"></a>
             <a href="https://developer.microsoft.com/en-us/" title="MS Developer"></a>
             <a href="https://msdn.microsoft.com/en-us/default.aspx" title="MSDN"></a>
             <a href="https://my.visualstudio.com/getstarted" title="My Visual Studio"></a>
@@ -86,22 +88,59 @@ Copyright © 2019, State of Grace, Department of Fun and Games
             <a class="esri-icon-close" onclick="hidex(this.parentNode)"></a>
         </aside>
         <main>
+            <details class="sidebar">
+                <summary>&equiv;</summary>
+                <a href="https://blogs.esri.com/esri/arcgis/" title="ArcGIS Blog"></a>
+                <a href="https://developers.arcgis.com" title="ArcGIS Developers"></a>
+                <a href="http://www.arcgis.com/" title="ArcGIS Online"></a>
+                <a href="http://opendata.arcgis.com/" title="ArcGIS OpenData"></a>
+                <a href="http://resources.arcgis.com/en/home/" title="ArcGIS Resources"></a>
+                <a href="http://solutions.arcgis.com/" title="ArcGIS Solutions"></a>
+                <a href="https://blogs.msdn.microsoft.com/azuregov/" title="AzureGov blog"></a>
+                <a href="http://www.esri.com/videos/" title="Esri Videos"></a>
+                <a href="https://community.esri.com/" title="GeoNyet"></a>
+                <a href="http://www.sco.ca.gov/calaters.html" title="CalATERS"></a>
+                <a href="http://www.caltravelstore.com/" title="CalTravelStore"></a>
+                <a href="https://gis-california.opendata.arcgis.com/" title="California State Geoportal"></a>
+                <a href="https://github.com/Office-of-Digital-Innovation" title="CA State Templates"></a>
+                <a href="https://data-cdfw.opendata.arcgis.com/" title="CDFW Open Data"></a>
+                <a href="https://data.cnra.ca.gov/" data-title="CNRA Open Data"></a>
+                <a href="https://data.ca.gov/" data-title="California Open Data Portal"></a>
+                <a href="https://creativecommons.org/choose/" title="Creative Commons"></a>
+                <a href="https://cdfwsp.wildlife.ca.gov/" title="CDFW SharePoint"></a>
+                <a href="https://ftp.wildlife.ca.gov/" title="FTP"></a>
+                <a href="https://anaconda.org/" title="Anaconda"></a>
+                <a href="https://bitbucket.org" title="BitBucket"></a>
+                <a href="https://github.com" title="GitHub"></a>
+                <a href="https://esri.github.io"></a>
+                <a href="https://gitlab.com" title="GitLab"></a>
+                <a href="https://visualstudio.com/" title="VSTS"></a>
+                <a href="https://dashboard.heroku.com/" title="Heroku"></a>
+                <a href="https://console.bluemix.net/dashboard/apps/" title="IBM Cloud"></a>
+                <a href="https://developer.microsoft.com/en-us/" title="MS Developer"></a>
+                <a href="https://msdn.microsoft.com/en-us/default.aspx" title="MSDN"></a>
+                <a href="https://my.visualstudio.com/getstarted" title="My Visual Studio"></a>
+                <a href="https://trello.com/home" title="Trello"></a>
+                <a href="https://www.test-cors.org/"></a>
+                <a href="https://jsonlint.com/"></a>
+                <a href="https://biosgis.github.io" style="display: none;"></a>
+            </details>
             <h2>
                 CDFW apps:
-                <a href="https://map.dfg.ca.gov/ace/">ACE</a>
+                <a href="https://apps.wildlife.ca.gov/ace/">ACE</a>
                 <a href="https://www.arcgis.com">AGOL</a>
                 <a href="https://map.dfg.ca.gov/arcgis/">AGS</a>
-                <a href="https://map.dfg.ca.gov/bios/?bl=Streets&zl=8">BIOS</a>
-                <a href="https://map.dfg.ca.gov/bios/?al=ds45&dslist=8,85,704,705,1002,1354,583,2652">CNDDB</a>
-                <a href="https://map.dfg.ca.gov/bios/?bookmark=326">NSO</a>
-                <a href="https://map.dfg.ca.gov/bios/?tool=cnddbQuick">QuickViewer</a>
+                <a href="https://apps.wildlife.ca.gov/bios/?bl=Streets&zl=8">BIOS</a>
+                <a href="https://apps.wildlife.ca.gov/bios/?al=ds45&dslist=8,85,704,705,1002,1354,583,2652">CNDDB</a>
+                <a href="https://apps.wildlife.ca.gov/bios/?bookmark=326">NSO</a>
+                <a href="https://apps.wildlife.ca.gov/bios/?tool=cnddbQuick">QuickViewer</a>
                 <a href="https://www.wildlife.ca.gov/Data/CNDDB/Submitting-Data">Field Survey</a>
-                <a href="https://map.dfg.ca.gov/fishing/">FishingGuide</a>
-                <a href="https://map.dfg.ca.gov/sportfishingregs/">FishingRegs</a>
-                <a href="https://map.dfg.ca.gov/lands/">Lands</a>
-                <a href="https://map.dfg.ca.gov/marine/">Marine</a>
+                <a href="https://apps.wildlife.ca.gov/fishing/">FishingGuide</a>
+                <a href="https://apps.wildlife.ca.gov/sportfishingregs/">FishingRegs</a>
+                <a href="https://apps.wildlife.ca.gov/lands/">Lands</a>
+                <a href="https://apps.wildlife.ca.gov/marine/">Marine</a>
                 <a href="https://data-cdfw.opendata.arcgis.com">OpenData</a>
-                <a href="https://map.dfg.ca.gov/rarefind/view/rarefind.aspx">RareFind5</a>
+                <a href="https://apps.wildlife.ca.gov/rarefind/view/rarefind.aspx">RareFind5</a>
             </h2>
             <h2>
                 <a href="https://www.wildlife.ca.gov">CDFW</a> pages:
@@ -128,6 +167,14 @@ Copyright © 2019, State of Grace, Department of Fun and Games
                 document.write(' &rect; Window Size: ' + window.innerWidth + 'x' + window.innerHeight);
                 document.write(' &bull; URL Referer: ' + document.referrer);
             </script>
+            <a href="." style="text-decoration: none; color: silver;" target="_blank">&square;</a>
+            &reg;
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+            </a><br />This work is licensed under a 
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribution 4.0 International License
+            </a>.
         </footer>
     </body>
 </html>

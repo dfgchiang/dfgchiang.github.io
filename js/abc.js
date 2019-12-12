@@ -1,10 +1,10 @@
 /* 
-Copyright © 2019, State of Grace, Department of Fun and Games
-[MIT License](https://mit-license.org/)
-[GNU GPL v3](https://www.gnu.org/licenses/)
-[open-license](https://project-open-data.cio.gov/open-licenses/)
-[OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
-[FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
+ Copyright © 2019, State of Grace, Department of Fun and Games
+ [MIT License](https://mit-license.org/)
+ [GNU GPL v3](https://www.gnu.org/licenses/)
+ [open-license](https://project-open-data.cio.gov/open-licenses/)
+ [OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+ [FreeBSD](https://www.freebsd.org/copyright/freebsd-license.html)
  */
 // abc.js 20140910 dfgchiang 20190214
 // All Basic Convenience Generic Helper fxns
@@ -13,34 +13,105 @@ var rv = (Math.random() * 10).toFixed(5);
 //================================
 // CORE COMMON Helpers (Dottyjs)
 //================================
-function $(id) { return document.getElementById(id); }
-function $class(x) { return document.getElementsByClassName(x); }
-function $name(x) { return document.getElementsByName(x); }
-function $tag(x) { return document.getElementsByTagName(x); }
-function add(a, b) { return a + b; }
-function addbrk(x) { return x + '<br />'; }//-20141111
-function addCss(id, x) { $(id).className += ' ' + x; }
-function bolden(x) { return '<b>' + x + '</b>'; }//-20141112
-function datestampoo() { return (new Date()).getTime(); }
-function echo(s) { console.log(s); }//-20170428
-function fillval(x, val) { $(x).innerHTML = val; show(x); }
-function tagh3(x) { return '<h3>' + x + '</h3>'; }//-20141112
-function hide(id) { $(id).style.display = 'none'; }
-function hid(id) { if ($(id).style.display === 'none') { return true; } else { return false; } }
-function pass(s) { var x = s; }
-function removeCss(id, x) { $(id).className.replace(x, ''); }
-function show(id) { $(id).style.display = ''; }
-function showing(id) { if ($(id).style.display !== 'none') { return true; } else { return false; } }
-function shown(id) { if ($(id).style.display !== 'none') { return true; } else { return false; } }
-function showTable(id) { $(id).style.display = 'table'; }
-function tagtitle(s) { this.title = s; }
+function $(id) {
+    return document.getElementById(id);
+}
+function $class(x) {
+    return document.getElementsByClassName(x);
+}
+function $name(x) {
+    return document.getElementsByName(x);
+}
+function $tag(x) {
+    return document.getElementsByTagName(x);
+}
+function add(a, b) {
+    return a + b;
+}
+function addbrk(x) {
+    return x + '<br />';
+}//-20141111
+function addCss(id, x) {
+    $(id).className += ' ' + x;
+}
+function bolden(x) {
+    return '<b>' + x + '</b>';
+}//-20141112
+function datestampoo() {
+    return (new Date()).getTime();
+}
+function echo(s) {
+    console.log(s);
+}//-20170428
+function fillval(x, val) {
+    $(x).innerHTML = val;
+    show(x);
+}
+function tagh3(x) {
+    return '<h3>' + x + '</h3>';
+}//-20141112
+function hide(id) {
+    $(id).style.display = 'none';
+}
+function hid(id) {
+    if ($(id).style.display === 'none') {
+        return true;
+    } else {
+        return false;
+    }
+}
+function pass(s) {
+    var x = s;
+}
+function removeCss(id, x) {
+    $(id).className.replace(x, '');
+}
+function show(id) {
+    $(id).style.display = '';
+}
+function showing(id) {
+    if ($(id).style.display !== 'none') {
+        return true;
+    } else {
+        return false;
+    }
+}
+function shown(id) {
+    if ($(id).style.display !== 'none') {
+        return true;
+    } else {
+        return false;
+    }
+}
+function showTable(id) {
+    $(id).style.display = 'table';
+}
+function tagtitle(s) {
+    this.title = s;
+}
 //function toggle(id) { if (hid(id)) { show(id); } else { hide(id); } }
-function toggle(id) { if (shown(id)) { hide(id); } else { show(id); } }
-function wtrim(str) { return str.replace(/^\s+|\s+$/g, ''); }
-function pl(s) { console.log(s); }
-function hidex(x) { x.style.display = 'none'; }
-function showx(x) { x.style.display = ''; }//expo
-function togglex(x) { (x.style.display !== 'none') ? hidex(x) : showx(x); }
+function toggle(id) {
+    if (shown(id)) {
+        hide(id);
+    } else {
+        show(id);
+    }
+}
+function wtrim(str) {
+    return str.replace(/^\s+|\s+$/g, '');
+}
+function pl(s) {
+    console.log(s);
+}
+function hidex(x) {
+    x.style.display = 'none';
+}
+function showx(x) {
+    x.style.display = '';
+}//expo
+function togglex(x) {
+    (x.style.display !== 'none') ? hidex(x) : showx(x);
+}
 function addscript(x) {
     var tag = document.createElement('script');
     tag.type = 'text/javascript';
@@ -226,7 +297,9 @@ function arrayShuffleToFront(arr, it) {
 function capword(s) {
     return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
 }
-function datetimenow() { return (new Date()).getTime(); }
+function datetimenow() {
+    return (new Date()).getTime();
+}
 //--- Interpret keycode into word-20150113
 function decodeKey(e) {
     var keycode = (window.event ? event.keyCode : e.keyCode);
@@ -271,7 +344,8 @@ function arrayItemById(arr, id) {
 function getTarget(e) {
     e = e || window.event;
     return (e.target || e.srcElement);
-};
+}
+;
 function Hob(uiid) {
     var ho = $(uiid);
     this.put = function (msg) {
@@ -329,10 +403,10 @@ function jsonAddProp(json, name, prop) {
 }
 //--- Deserialize a key-value string by certain separators and returns a JSON --20160427
 /*
-* @param {String} kvchain: a serialized key-value string like 'key1=val1&key2=val2&key3=val3'.
-* @param {String} ksep: OPTIONAL key separator character delimiting each key-value pair, like '&' or '|'.
-* @param {String} vsep: OPTIONAL value separator between an field name and its value, like '=' or ':'.
-*/
+ * @param {String} kvchain: a serialized key-value string like 'key1=val1&key2=val2&key3=val3'.
+ * @param {String} ksep: OPTIONAL key separator character delimiting each key-value pair, like '&' or '|'.
+ * @param {String} vsep: OPTIONAL value separator between an field name and its value, like '=' or ':'.
+ */
 function jsonize(kvchain, ksep, vsep) {
     var json = {};
     if (ksep === undefined) {
@@ -342,7 +416,9 @@ function jsonize(kvchain, ksep, vsep) {
             ksep = "|";
         }
     } //key-separator
-    if (vsep === undefined) { vsep = "="; } //value-separator
+    if (vsep === undefined) {
+        vsep = "=";
+    } //value-separator
     var kvpairs = kvchain.split(ksep);
     for (var i = 0; i < kvpairs.length; i++) {
         var keyval = kvpairs[i].split(vsep);
@@ -472,8 +548,7 @@ function zswap(id, a, b) {
 function ajaxGetText(url, params, callback) {
     if (window.XMLHttpRequest) {
         var xhr = new XMLHttpRequest();
-    }
-    else {
+    } else {
         var xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xhr.open("GET", url + "?" + params, true);
@@ -491,8 +566,7 @@ function ajaxPostText(url, params, callback) {
     var xhr;
     if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
         xhr = new XMLHttpRequest();
-    }
-    else {// code for IE6-
+    } else {// code for IE6-
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xhr.open("POST", url, true);
@@ -531,8 +605,7 @@ function ajaxGetXml(url, params, callback) {
 function loadXmlDoc(file) {
     if (window.XMLHttpRequest) {
         xhr = new XMLHttpRequest();
-    }
-    else {
+    } else {
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xhr.open("GET", file, false);
@@ -542,8 +615,8 @@ function loadXmlDoc(file) {
 //--- Get Ajax Response directly as JSON REF(http://mathiasbynens.be/notes/xhr-responsetype-json)
 var ajaxGetJson = function (url, callback, errorHandler) {
     var xhr = typeof XMLHttpRequest !== 'undefined'
-      ? new XMLHttpRequest()
-      : new ActiveXObject('Microsoft.XMLHTTP');
+            ? new XMLHttpRequest()
+            : new ActiveXObject('Microsoft.XMLHTTP');
     xhr.open('get', url, true);
     xhr.responseType = 'json';
     xhr.onreadystatechange = function () {
@@ -563,21 +636,21 @@ var ajaxGetJson = function (url, callback, errorHandler) {
 };
 
 /* ----------------------- BASIC AJAX CALL BLOCK TEMPLATE ----------------------------
-    var url = app.baseUrl + "/rest/Imaps.ashx";
-    var params = "o=GetOidsWhere&q=" + tableName + "&a=" + encodeURIComponent(where);
-    var callback = function (res) {
-        console.log("CALLBACK queryOidsWhere/callback... ");
-    }
-    ajaxPostText(url, params, callback);
-
-    var url = app.baseUrl + "/rest/BiosRegistrar.ashx";
-    //-- Get bios info from manifest and not old registry catalog
-    params = "o=GetSdeNamePublishedForDsId&q=" + parseInt(dscode);
-    callback = function (response) {
-        console.log("CALLBACK getJoinInfo/callback... ");
-    }
-    ajaxGetText(url, params, callback);
------------------------------------------ */
+ var url = app.baseUrl + "/rest/Imaps.ashx";
+ var params = "o=GetOidsWhere&q=" + tableName + "&a=" + encodeURIComponent(where);
+ var callback = function (res) {
+ console.log("CALLBACK queryOidsWhere/callback... ");
+ }
+ ajaxPostText(url, params, callback);
+ 
+ var url = app.baseUrl + "/rest/BiosRegistrar.ashx";
+ //-- Get bios info from manifest and not old registry catalog
+ params = "o=GetSdeNamePublishedForDsId&q=" + parseInt(dscode);
+ callback = function (response) {
+ console.log("CALLBACK getJoinInfo/callback... ");
+ }
+ ajaxGetText(url, params, callback);
+ ----------------------------------------- */
 //addscript
 function loadScript(url) {
     var s = document.createElement('script');
@@ -642,24 +715,24 @@ if (typeof WebAssembly === 'object' && typeof WebAssembly.Memory === 'function')
 }
 function navigatorInfo() {
     var msg = 'navigator.appName=' + navigator.appName + br +
-        'navigator.cookieEnabled=' + navigator.cookieEnabled + br +
-        'navigator.platform(operating system)=' + navigator.platform + br +
-        'navigator.userAgent=' + navigator.userAgent + br;
+            'navigator.cookieEnabled=' + navigator.cookieEnabled + br +
+            'navigator.platform(operating system)=' + navigator.platform + br +
+            'navigator.userAgent=' + navigator.userAgent + br;
     return msg;
 }
 function windowInfo() {
     var msg = 'window.innerHeight=' + window.innerHeight + br +
-        'window.innerWidth=' + window.innerWidth + br +
-        'window.scrollX=' + window.scrollX + br + // Horizontal scrolling
-        'window.scrollY=' + window.scrollY + br + // Vertical scrolling
-        'window.screen.availHeight= ' + window.screen.availHeight + br +
-        'window.screen.availLeft= ' + window.screen.availLeft + br +
-        'window.screen.availTop= ' + window.screen.availTop + br +
-        'window.screen.availWidth= ' + window.screen.availWidth + br +
-        'window.screen.colorDepth= ' + window.screen.colorDepth + br +
-        'window.screen.height= ' + window.screen.height + br +
-        'window.screen.pixelDepth= ' + window.screen.pixelDepth + br +
-        'window.screen.width= ' + window.screen.width;
+            'window.innerWidth=' + window.innerWidth + br +
+            'window.scrollX=' + window.scrollX + br + // Horizontal scrolling
+            'window.scrollY=' + window.scrollY + br + // Vertical scrolling
+            'window.screen.availHeight= ' + window.screen.availHeight + br +
+            'window.screen.availLeft= ' + window.screen.availLeft + br +
+            'window.screen.availTop= ' + window.screen.availTop + br +
+            'window.screen.availWidth= ' + window.screen.availWidth + br +
+            'window.screen.colorDepth= ' + window.screen.colorDepth + br +
+            'window.screen.height= ' + window.screen.height + br +
+            'window.screen.pixelDepth= ' + window.screen.pixelDepth + br +
+            'window.screen.width= ' + window.screen.width;
     return msg;
 }
 //======================================================================
@@ -800,3 +873,7 @@ function cssweep(cssname, msg) {
     }
     return tags.length;
 }
+window.addEventListener('load', function () {
+    console.log('Window loaded');
+    om = poplinks();
+});
