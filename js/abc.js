@@ -657,12 +657,6 @@ function loadScript(url) {
     s.src = url;
     document.getElementsByTagName('head')[0].appendChild(s);
 }
-function setCookie(c_name, value, exdays) {
-    var exdate = new Date();
-    exdate.setDate(exdate.getDate() + exdays);
-    var c_value = escape(value) + ((exdays === null) ? "" : "; expires=" + exdate.toUTCString());
-    document.cookie = c_name + "=" + c_value;
-}
 function getCookie(c_name) {
     var c_value = document.cookie;
     var c_start = c_value.indexOf(" " + c_name + "=");
@@ -680,6 +674,34 @@ function getCookie(c_name) {
         c_value = unescape(c_value.substring(c_start, c_end));
     }
     return c_value;
+}
+function setCookie(c_name, value, exdays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value = escape(value) + ((exdays === null) ? "" : "; expires=" + exdate.toUTCString());
+    document.cookie = c_name + "=" + c_value;
+}
+function getcookie(cname) {
+    var cvalue = null;
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            cvalue = c.substring(name.length, c.length);
+        }
+    }
+    return cvalue;
+}
+function setcookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/; SameSite=None; Secure";
 }
 function sendpage() {
     window.location = "mailto:?body=" + window.location.href;
