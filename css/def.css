@@ -127,10 +127,11 @@ nav ul {
 }
 
 nav li {
-    border-right: 1px solid silver;
+    border: 0;
+    border-left: 1px solid silver;
     display: inline;
     margin: 0;
-    padding: 2px 8px;
+    padding: 0;
 }
 
 nav li:hover {
@@ -232,5 +233,93 @@ summary {
 
 .togl:hover {
     background-color: aliceblue;
+}
+
+@media only screen and (min-width: 600px) {
+
+    /* For tablets or larger: */
+    body {
+        font-size: 123%;
+        line-height: 100%;
+    }
+
+    aside.wide {
+        width: 50%;
+    }
+
+    .maindiv {
+        height: 90%;
+    }
+
+    #msgbar {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    /* For desktop: */
+    body {
+        font-size: 111%;
+    }
+
+    aside {
+        width: 35%;
+    }
+
+    #appname {
+        display: none;
+    }
+
+    #bookmarks {
+        width: 50%;
+    }
+
+    #catalog {
+        width: 50%;
+    }
+
+    #contents {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    #apptitle {
+        display: inline-block;
+    }
+}
+
+@media print {
+    body {
+        border: 1px solid dimgray;
+        box-sizing: border-box;
+    }
+
+    header {
+        border: 1px solid slategray;
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    footer {
+        display: block;
+    }
+
+    #msgbar-toggle {
+        display: none;
+    }
+
+    #nav-menu {
+        display: none;
+    }
 }
 
