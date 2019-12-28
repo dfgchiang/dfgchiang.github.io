@@ -899,3 +899,7 @@ window.addEventListener('load', function () {
     console.log('Window loaded');
     om = poplinks();
 });
+/*
+ * Common functional pattern: fx(params, callback) 
+ * Common functional pattern: toggleSomething(x, bool)
+ */

@@ -14,6 +14,7 @@ Copyright © 2019, State of Grace, Department of Fun and Games
 */
 body {
     font-size: 123%;
+    line-height: 150%;
 }
 
 a {
@@ -165,7 +166,7 @@ summary {
     font-weight: bold;
 }
 .bug {
-    border-right: 5px solid crimson;
+    border-right: 2px solid crimson;
     color: red;
     font-weight: bold;
 }
@@ -173,9 +174,11 @@ summary {
 .bugfix {
     color: brown;
 }
-
+.doc {
+    color: navy;
+}
 .doing {
-    border-right: 5px solid yellow;
+    border-right: 2px solid yellow;
     color: rebeccapurple;
 }
 
@@ -240,19 +243,7 @@ summary {
     /* For tablets or larger: */
     body {
         font-size: 123%;
-        line-height: 100%;
-    }
-
-    aside.wide {
-        width: 50%;
-    }
-
-    .maindiv {
-        height: 90%;
-    }
-
-    #msgbar {
-        width: 60%;
+        line-height: 123%;
     }
 }
 
@@ -261,26 +252,6 @@ summary {
     /* For desktop: */
     body {
         font-size: 111%;
-    }
-
-    aside {
-        width: 35%;
-    }
-
-    #appname {
-        display: none;
-    }
-
-    #bookmarks {
-        width: 50%;
-    }
-
-    #catalog {
-        width: 50%;
-    }
-
-    #contents {
-        width: 40%;
     }
 }
 
@@ -313,13 +284,13 @@ summary {
     footer {
         display: block;
     }
-
-    #msgbar-toggle {
-        display: none;
-    }
-
-    #nav-menu {
+    .sidebar {
         display: none;
     }
 }
 
+/*
+UI Design Pattern: each vertical sidebar uses an HTML ASIDE element.
+Each horizontal bottom panel uses an HTML SECTION element.
+This makes finding and opening a panel and hiding the others easy.
+*/
