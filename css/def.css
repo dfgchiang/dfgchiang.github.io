@@ -161,6 +161,7 @@ pre.cmd {
 }
 
 summary {
+    font-family: 'Comic Sans MS', cursive;
     font-size: larger;
     font-style: italic;
     font-weight: bold;
@@ -174,6 +175,14 @@ summary {
 .bugfix {
     color: brown;
 }
+
+.dd {
+    color: lightgray;
+}
+.dd::before {
+    content: '\0020\0020\002F\002F';
+}
+
 .doc {
     color: navy;
 }
