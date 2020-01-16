@@ -62,7 +62,7 @@ footer {
 }
 
 h1 {
-    font-family: Consolas, Monaco, 'Arial Black', 'Arial Narrow', Geneva, Tahoma, serif;
+    font-family: Consolas, Monaco, 'Arial Black', 'Arial Narrow', 'Arial Narrow Bold', Impact, Haettenschweiler, fantasy;
     margin-bottom: 0;
     margin-top: 0;
     position: relative;
@@ -70,17 +70,16 @@ h1 {
 
 h2 {
     border-top: 1px solid floralwhite;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     position: relative;
 }
 
 h3 {
-    font-family: Georgia, serif;
     position: relative;
 }
 
 h4 {
-    font-family: Verdana, sans-serif;
+    margin: .5em;
     position: relative;
 }
 
@@ -90,7 +89,8 @@ h5 {
 }
 
 h6 {
-    font-family: Consolas, Monaco, monospace;
+    font-family: Verdana, 'Segoe UI', Tahoma, Geneva, Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 header {
@@ -100,9 +100,7 @@ header {
 }
 
 li {
-    border-top: 1px solid lavender;
     line-height: 150%;
-    padding: 2px 0;
 }
 
 main {
@@ -142,7 +140,10 @@ nav li:hover {
 ol {
     border-bottom: 1px solid azure;
 }
-
+ol.legal li {
+    border-top: 1px solid lavender;
+    padding: 2px 0;
+}
 p.notes {
     font-family: fantasy;
 }
@@ -166,8 +167,17 @@ summary {
     font-style: italic;
     font-weight: bold;
 }
+summary.mell::after {
+    content: '\22EF';
+    /*=MIDLINE HORIZONTAL ELLIPSIS, 2026=horizontal ellipsis*/
+    font-size: larger;
+}
+ul.legal li {
+    border-top: 1px solid lavender;
+    padding: 2px 0;
+}
+
 .bug {
-    border-right: 2px solid crimson;
     color: red;
     font-weight: bold;
 }
@@ -187,7 +197,6 @@ summary {
     color: navy;
 }
 .doing {
-    border-right: 2px solid yellow;
     color: rebeccapurple;
 }
 
@@ -202,7 +211,9 @@ summary {
 .hide {
     display: none;
 }
-
+.internal {
+    color: slategray;
+}
 .issue {
     color: magenta;
     font-style: italic;
@@ -210,6 +221,9 @@ summary {
 
 .msgx {
     display: none;
+}
+.new {
+    background-color: lightyellow;
 }
 .oandm {
     /*OperationAndMaintenance*/
