@@ -220,6 +220,15 @@ function addEventHandler(target, evtype, listener) {
         target.addEventListener(evtype, listener, false); // returns void
     }
 }
+function arrayadd(a, b) {
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] === b) {
+            return false;
+        }
+    }
+    return (a.push(b));
+}
+
 function arrayAddItem(arr, it) {
     var addnew = true;
     for (var i = 0; i < arr.length; i++) {
@@ -679,7 +688,7 @@ function setCookie(c_name, value, exdays) {
     var exdate = new Date();
     exdate.setDate(exdate.getDate() + exdays);
     var c_value = escape(value) + ((exdays === null) ? "" : "; expires=" + exdate.toUTCString());
-    document.cookie = c_name + "=" + c_value;
+    document.cookie = c_name + "=" + c_value + ";path=/; SameSite=None; Secure";
 }
 function getcookie(cname) {
     var cvalue = null;
