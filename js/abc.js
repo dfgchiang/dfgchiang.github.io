@@ -228,7 +228,29 @@ function arrayadd(a, b) {
     }
     return (a.push(b));
 }
-
+function arrayhas(a, b) {
+    for (var i = 0; i < a.length; i++) {
+        if (a[i] === b) {
+            return true;
+        }
+    }
+    return false;
+}
+function arraymerge(a, b) {
+    var c = a.slice(); // NEW ES6 WAY: [...a]
+    for (var j = 0; j < b.length; j++) {
+        var d = true;
+        for (var i = 0; i < a.length; i++) {
+            if (a[i] === b[j]) {
+                d = false;
+            }
+        }
+        if (d === true) {
+            c.push(b[j]);
+        }
+    }
+    return c;
+}
 function arrayAddItem(arr, it) {
     var addnew = true;
     for (var i = 0; i < arr.length; i++) {
