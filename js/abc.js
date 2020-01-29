@@ -213,12 +213,38 @@ function poplinks() {
 //========================
 // Additional Helpers
 //========================
-function addEventHandler(target, evtype, listener) {
-    if (window.attachEvent) {
-        target.attachEvent("on" + evtype, listener); // can return boolean
-    } else {
-        target.addEventListener(evtype, listener, false); // returns void
+function addcss(files, rv, dir) {
+    if (dir === undefined) {
+        dir = 'css/';
     }
+    for (var i = 0; i < files.length; i++) {
+        let x = document.createElement('link');
+        x.setAttribute('rel', 'stylesheet');
+        x.href = dir + cssfiles[i] + '?' + rv; // ie '../css/'
+        document.head.appendChild(x);
+    }
+}
+function addlibs(files, rv, dir) {
+    if (files.length === 0) {
+        return;
+    }
+    let f = dir + files.shift(); // ie '../js/'
+    let x = document.createElement('script');
+    x.type = 'text/javascript';
+    x.src = f + '?v=' + rv;
+    x.onload = function () {
+        addlibs(files, rv, dir);
+    }
+    document.head.appendChild(x);
+}
+function addmsg(s) {
+    document.getElementById('msgbox').innerHTML += s + '<br/>';
+    var msgbox = document.getElementById('msgbox');
+    msgbox.scrollTop = msgbox.scrollHeight;
+}
+// TO CLEAN UP UNWANTED OUTPUTS IN PRODUCTION RENAME ABOVE FUNCTION TO BELOW
+function xxaddmsg(s) {
+    return false;
 }
 function arrayadd(a, b) {
     for (var i = 0; i < a.length; i++) {
@@ -250,6 +276,13 @@ function arraymerge(a, b) {
         }
     }
     return c;
+}
+function addEventHandler(target, evtype, listener) {
+    if (window.attachEvent) {
+        target.attachEvent("on" + evtype, listener); // can return boolean
+    } else {
+        target.addEventListener(evtype, listener, false); // returns void
+    }
 }
 function arrayAddItem(arr, it) {
     var addnew = true;
