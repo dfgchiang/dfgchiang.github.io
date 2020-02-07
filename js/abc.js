@@ -779,6 +779,52 @@ function fooid() {
     var guid = (S4() + S4() + "-" + S4() + "-4" + S4().substr(0, 3) + "-" + S4() + "-" + S4() + S4() + S4()).toLowerCase();
     return guid;
 }
+function stp(s, f) {
+    if (s === undefined) {
+        document.getElementById('stdout').innerHTML = '';
+    } else if (f === undefined) {
+        document.getElementById('stdout').innerHTML = s;
+    } else if (f === true) {
+        document.getElementById('stdout').innerHTML += s + "<br>";
+    } else { // if (f === false || f === null) {
+        document.getElementById('stdout').innerHTML += s;
+    }
+}
+function browsertest() {
+    //--- BROWSER CHECK 20190523
+    function namebrowser(name) {
+        //$('bclient').value = name;
+        $('browser').innerHTML = name;
+    }
+    if (navigator.userAgent.indexOf('AppleWebKit') > 0 || navigator.userAgent.indexOf('Safari') > 0) {
+        if (navigator.userAgent.indexOf('Edge') > 0) {
+            namebrowser('Edge');
+        } else if (navigator.userAgent.indexOf('OPR') > 0) {
+            namebrowser('Opera');
+        } else if (navigator.userAgent.indexOf('Chrome') > 0) {
+            namebrowser('Chrome');
+        } else if (navigator.platform.indexOf('MacIntel') >= 0) {
+            namebrowser('Safari');
+        } else {
+            namebrowser('Chromium');
+        }
+    } else if (navigator.userAgent.indexOf('Trident') > 0) {
+        namebrowser('IE');
+        document.getElementById('browser').classList.remove('browser');
+        document.getElementById('browser').classList.add('nobrowser');
+        $('browsercheck').classList.remove('checked');
+        $('browsercheck').classList.add('nopass');
+        show('warning');
+    } else if (navigator.userAgent.indexOf('Gecko') > 0) {
+        if (navigator.userAgent.indexOf('SeaMonkey') > 0) {
+            namebrowser('SeaMonkey');
+        } else if (navigator.userAgent.indexOf('Firefox') > 0) {
+            namebrowser('Firefox');
+        }
+    } else {
+        namebrowser('UNKNOWN');
+    }
+}
 //===============================
 // BROWSER CLIENT INFO 20180612
 //===============================
