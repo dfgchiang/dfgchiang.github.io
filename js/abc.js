@@ -194,7 +194,7 @@ function poplinks() {
                     a.href.indexOf("mailto:") < 0 && a.target !== '_self') {
                 a.target = "_blank";
             }
-            if (a.innerHTML === '') {// && a.className === ''
+            if (a.innerHTML === '' && a.className.indexOf('-icon') < 0 && a.className.indexOf('fa-') < 0) {// && a.className === ''
                 a.style.lineHeight = '123%';
                 if (a.title !== '') {
                     a.innerHTML = a.title;
