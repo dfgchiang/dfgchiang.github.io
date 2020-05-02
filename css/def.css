@@ -40,6 +40,7 @@ a.flo::after {
 }
 
 article {
+    position: relative;
     border-bottom: 1px solid navajowhite;
 }
 
@@ -47,9 +48,8 @@ aside {
     position: relative;
     background-color: white;
     border: 1px solid silver;
-    box-shadow: gray -5px 5px 5px;
+    box-shadow: lightgray -5px 5px 5px;
     float: right;
-    padding: 1%;
     z-index: 200;
 }
 code {
@@ -59,8 +59,8 @@ code {
 }
 
 details {
-    margin: 5px;
-    padding-left: 1%;
+    margin-left: 1%;
+    padding: 1%;
 }
 details ol {
     margin-left: 1%;
