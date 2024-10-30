@@ -7,67 +7,85 @@ Copyright © 2019, State of Grace, Department of Fun and Games
 [OpenGov3](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 -->
 <html>
-    <head>
-        <title>apps</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="dfgchiang">
-        <meta name="description" content="CDFW apps">
-        <meta name="generator" content="aios-20180810">
-        <meta name="robots" content="noindex, nofollow, noarchive">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
-        <script src="https://js.arcgis.com/4.8/"></script>
-        <link rel="stylesheet" href="https://biosgis.github.io/css/dotty.css">
-        <script src="https://biosgis.github.io/js/dotty.js"></script>
-        <style type="text/css">
-            body {
-                font-family: Consolas, Monaco, Arial, Helvetica, sans-serif;
-                font-size: 123%;
-                margin: 0;
-                padding: 0;
-            }
-            main {
-                padding: 2px 10px 20px 10px;
-            }
-        </style>
-        <script type="text/javascript">
-            window.addEventListener('load', function () {
-                om = poplinks();
-            });
+
+<head>
+    <title>apps</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="dfgchiang">
+    <meta name="description" content="CDFW apps">
+    <meta name="generator" content="aios-20180810">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.8/"></script>
+    <link rel="stylesheet" href="https://biosgis.github.io/css/dotty.css">
+    <script src="https://biosgis.github.io/js/dotty.js"></script>
+    <style type="text/css">
+        body {
+            font-family: Consolas, Monaco, Arial, Helvetica, sans-serif;
+            font-size: 123%;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            padding: 2px 10px 20px 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            om = poplinks();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Apps and Maps</h1>
+    </header>
+    <nav></nav>
+    <aside></aside>
+    <main>
+        <details>
+            <summary>
+                <h2>
+                    <a href="https://azure.com/">Azure</a>
+                    <a href="https://dev.azure.com/dfgchiang/"
+                        title="Azure DevOps formerly Visual Studio Team Services">DevOps</a>
+                    <a href="https://dev.azure.com/dfgchiang/">cdfw</a>
+                </h2>
+            </summary>
+        </details>
+        <h2 id="BIOS">
+            <a href="https://www.wildlife.ca.gov/Data/BIOS"
+                title="Biogeographic Information Observation System">BIOS</a>
+            <a href="https://map.dfg.ca.gov/bios">Viewer</a>
+            <a href="https://map.dfg.ca.gov/arcgis" title="ArcGIS Server REST services">AGS</a>
+            <a href="https://www.arcgis.com/home/search.html?q=biosds&start=1&sortOrder=desc&sortField=relevance"
+                title="ArcGIS Online">AGOL</a>
+        </h2>
+        <details>
+            <summary>BIOS Links</summary>
+            <h3>ArcGIS Online Data</h3>
+            <ol>
+                <li><a
+                        href="https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/BIOS_ManifestPro/FeatureServer"></a>
+                </li>
+            </ol>
+        </details>
+    </main>
+    <footer>
+        @<a href="mailto:dean.chiang@wildlife.ca.gov">dchiang</a>
+        <script>
+            var brk = '<br>';
+            document.write('&copy;' + document.lastModified + brk);
+            document.write('&bull; URL Referer: ' + document.referrer + brk);
+            document.write('&diams; Browser Client: ' + navigator.userAgent + ' on ' + navigator.platform + brk);
+            document.write('&rect; Window Size: ' + window.innerWidth + 'x' + window.innerHeight + brk);
         </script>
-    </head>
-    <body>
-        <header>
-            <h1>Apps and Maps</h1>
-        </header>
-        <nav></nav>
-        <aside></aside>
-        <main>
-            <h2 id="BIOS">
-                <a href="https://www.wildlife.ca.gov/Data/BIOS" title="Biogeographic Information Observation System">BIOS</a>
-                <a href="https://map.dfg.ca.gov/bios">Viewer</a>
-                <a href="https://map.dfg.ca.gov/arcgis" title="ArcGIS Server REST services">AGS</a>
-                <a href="https://www.arcgis.com/home/search.html?q=biosds&start=1&sortOrder=desc&sortField=relevance" title="ArcGIS Online">AGOL</a>
-            </h2>
-            <details>
-                <summary>BIOS Links</summary>
-                <h3>ArcGIS Online Data</h3>
-                <ol>
-                    <li><a href="https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/BIOS_ManifestPro/FeatureServer"></a></li>
-                </ol>
-            </details>
-        </main>
-        <footer>
-            @<a href="mailto:dean.chiang@wildlife.ca.gov">dchiang</a>
-            <script>
-                var brk = '<br>';
-                document.write('&copy;' + document.lastModified + brk);
-                document.write('&bull; URL Referer: ' + document.referrer + brk);
-                document.write('&diams; Browser Client: ' + navigator.userAgent + ' on ' + navigator.platform + brk);
-                document.write('&rect; Window Size: ' + window.innerWidth + 'x' + window.innerHeight + brk);
-            </script>
-        </footer>
-    </body>
+    </footer>
+</body>
+
 </html>
